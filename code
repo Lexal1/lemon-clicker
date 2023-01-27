@@ -10,8 +10,8 @@ Let's make a game!
 
 Settings
 
- spritesheet:i, 48 by 48, https://i.postimg.cc/66cT3thM/lemons.png
- spritesheet:ach, 48 by 48, https://i.postimg.cc/1zDy6rsY/achs-export.png
+ spritesheet:i, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/lemons-export.png
+ spritesheet:ach, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/achs-export.png
  building cost increase:125%
 
 CSS
