@@ -5,7 +5,7 @@ Let's make a game!
  created:04/01/2023
  updated:21/01/2023
  version:1
- desc:i love lemons<//><b>version 0.1.1</b><.>added tooltips so that you can see how many lemons and limes you're making<.>nerfed vending machine prices<.>added more upgrades<//><b>version 0.1</b><.>added more progression: limes<.>tweaked the CSS(hell)<.>added more achievements<//><b>version 0.0.1</b><.>added textures<.>added a background<.>added additions<.>additional additions include:<//>button texture<//>upgrades<//>  proper CSS(kinda)<//><b>version 0.0.01</b><.>made this because why not<.>screw you communism
+ desc:i love lemons<//><b>version 0.1.1</b><.>added tooltips so that you can see how many lemons and limes you're making<.>nerfed vending machine prices<.>added more upgrades<//><b>version 0.1</b>added more progression: limes<.>tweaked the CSS(hell)<.>added more achievements<.>added tooltips so that you can see how many lemons and limes you're making and nerfed vending machine prices<//><b>version 0.0.1</b><.>added textures<.>added a background<.>added additions<.>additional additions include:<//>button texture<//>upgrades<//>  proper CSS(kinda)<//><b>version 0.0.01</b><.>made this because why not<.>screw you communism
 
 Settings
 
@@ -81,6 +81,7 @@ Resources
  *orange|oranges
   show earned
   hidden when 0
+  desc:Failing to rhyme <b>[orange:ps] oranges</b> per second.
   name:Oranges
   icon:i[2,0]
 
@@ -105,7 +106,7 @@ Buildings
 //buy with lemons and limes
  *lemonadestand3|lemstore
   name:Lemonade Store
-  on tick:gain 25 lemons
+  on tick:gain 35 lemons
   on tick:gain 1 lime
   desc:A big store to sell more lemonade.
   cost:40000 lemons, 50 limes
@@ -114,7 +115,7 @@ Buildings
 
  *lemonadestand4|vending
   name:Lemonade Vending Machine
-  on tick:gain 65 lemons
+  on tick:gain 165 lemons
   on tick:gain 5 limes
   desc:A portable vending machine to sell lots of lemonade.
   cost:5500000 lemons, 50000 limes
@@ -155,7 +156,7 @@ Upgrades
 
  *boxup4
   name:Sugar cookies
-  desc:Boxes are <b>twice</b> as efficient.<q>"Makes the lemonade taste worse, but hey, sugar cookies increase profits!"</q>
+  desc:Boxes are <b>twice</b> as efficient.<q>"Makes the lemonade taste worse, but hey, at least they taste good!"</q>
   req:50 box
   cost:2e7 lemons
   passive:multiply lemon yield of box by 2
@@ -167,7 +168,7 @@ Upgrades
   name:Coat of paint
   desc:Stands are <b>twice</b> as efficient.<q>"Now they look far more appealing."</q>
   req:1 stand
-  cost:1200 lemons
+  cost:1000 lemons
   passive:multiply lemon yield of stand by 2
   icon:i[0,6]
 
@@ -216,6 +217,24 @@ Upgrades
   passive:multiply lime yield of lemstore by 2
   icon:i[1,7]
 
+ *lemstoreup3
+  name:Jim
+  desc:Stores are <b>twice</b> as efficient.<q>"...from accounting."</q>
+  req:25 lemstore
+  cost:68000000 limes
+  passive:multiply lemon yield of lemstore by 2
+  passive:multiply lime yield of lemstore by 2
+  icon:i[2,7]
+
+ *lemstoreup4
+  name:Better advertising
+  desc:Stores are <b>twice</b> as efficient.<q>"Even shows up in the newspapers!"</q>
+  req:50 lemstore
+  cost:6800000000 limes
+  passive:multiply lemon yield of lemstore by 2
+  passive:multiply lime yield of lemstore by 2
+  icon:i[3,7]
+
 ///////////////////////////////////////////////////////LEMONADES
 
  *lemonade1
@@ -232,6 +251,22 @@ Upgrades
   passive:multiply yield of lemons by 1.01
   cost:1e10 lemons
   req:1e8 lemons:earned
+  icon:i[0,2]
+
+ *lemonade3
+  name:Lemon-limeade
+  desc:Lemon production +1%.<q>"Not to be confused with 7-Up."</q>
+  passive:multiply yield of lemons by 1.01
+  cost:1e13 lemons
+  req:1e11 lemons:earned
+  icon:i[0,2]
+
+ *lemonade4
+  name:D.I.Y Lemonade
+  desc:Lemon production +1%.<q>"...It's just a packet of sugar and some lemons..."</q>
+  passive:multiply yield of lemons by 1.01
+  cost:1e16 lemons
+  req:1e14 lemons:earned
   icon:i[0,2]
 
 ///////////////////////////////////////////////////////LIMEADES
@@ -263,7 +298,7 @@ Upgrades
   icon:i[1,0]
 
  *orangeunlock
-  name:Oranges, Orange Juice, and Everything in Between
+  name:Hero's Guide to Oranges
   desc:<b>Does absolutely nothing.</b><q>"Hey! It's soaked in orange juice! I don't think you can read this yet..."</q>
 //desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"These ain't your grandma's oranges!"</q>
   req:limeach3
@@ -303,6 +338,24 @@ Achievements
   req:1e8 lemons:earned
   icon:ach[3,0]
 
+ *lemonach5
+  name:Juice all the lemons
+  desc:Make 1 billion lemons.
+  req:1e9 lemons:earned
+  icon:ach[4,0]
+
+ *lemonach6
+  name:The whole world is covered in lemons
+  desc:Make 100 billion lemons.
+  req:1e12 lemons:earned
+  icon:ach[5,0]
+
+ *lemonach7
+  name:And not one of them is mine
+  desc:Make 1 trillion lemons.
+  req:1e13 lemons:earned
+  icon:ach[6,0]
+
 //LEMONS PER SECOND
 
  *lemonpsach1
@@ -319,10 +372,9 @@ Achievements
   icon:ach[1,0]
 
  *lemonpsach3
-  name:Close but no lemon
-  desc:Make 10,000 lemons per second.
+  name:Close but no banana
+  desc:Make 10,000 lemons per second.<q>"Hey, isn't this joke supposed to be lemon related?"</q>
   req:10000 lemons:ps
-//close but no banana
   icon:ach[2,0]
 
  *lemonpsach4
@@ -330,6 +382,24 @@ Achievements
   desc:Make 1 million lemons per second.<q>"That's a lot of lemons!"</q>
   req:1e6 lemons:ps
   icon:ach[3,0]
+
+ *lemonpsach5
+  name:Do you want to build a lemonade stand
+  desc:Make 100 million lemons per second.
+  req:1e8 lemons:ps
+  icon:ach[4,0]
+
+ *lemonpsach6
+  name:Gas gas gas
+  desc:Make 10 billion lemons per second.
+  req:1e10 lemons:ps
+  icon:ach[5,0]
+
+ *lemonpsach7
+  name:Lemons make the world go round
+  desc:Make 1 tillion lemons per second.<q>""...and what goes around, comes around! Wait, I've confused myself.</q>
+  req:1e12 lemons:ps
+  icon:ach[6,0]
 
 ///////////////////////////////////////////////LIME ACHS
 
@@ -386,6 +456,7 @@ Achievements
 /////////////////////////////BUILDING ACHS
 
 //BOX ACHS
+
  *boxach1
   name:Boxed in
   desc:Have 1 box.
@@ -447,4 +518,12 @@ Achievements
   name:Girl are you construction worker
   desc:Have 100 stores.<q>"because you are building"</q>
   req:100 lemstore
+  icon:ach[2,7]
+
+///vending achs
+
+ *vendach1
+  name:
+  desc:Have 1 vending machine.
+  req:1 vending
   icon:ach[2,7]
