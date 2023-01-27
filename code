@@ -1,4 +1,5 @@
 //aw crap here we go again
+
 Let's make a game!
  name:Lemonade Clicker
  by:lex
@@ -523,7 +524,19 @@ Achievements
 ///vending achs
 
  *vendach1
-  name:
+  name:Ca-klunk
   desc:Have 1 vending machine.
   req:1 vending
   icon:ach[2,7]
+  
+  *vendach2
+  name:Only a dollar
+  desc:Have 50 vending machines.
+  req:50 vending
+  icon:ach[3,7]
+  
+  *vendach3
+  name:Only 2 deaths so far
+  desc:Have 100 vending machines.
+  req:50 vending
+  icon:ach[4,7]
