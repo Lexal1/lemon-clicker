@@ -527,16 +527,16 @@ Achievements
   name:Ca-klunk
   desc:Have 1 vending machine.
   req:1 vending
-  icon:ach[2,7]
+  icon:ach[0,8]
   
   *vendach2
   name:Only a dollar
   desc:Have 50 vending machines.
   req:50 vending
-  icon:ach[3,7]
+  icon:ach[1,8]
   
   *vendach3
   name:Only 2 deaths so far
   desc:Have 100 vending machines.
   req:50 vending
-  icon:ach[4,7]
+  icon:ach[2,8]
