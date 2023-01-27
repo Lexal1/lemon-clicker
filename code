@@ -1,0 +1,450 @@
+//aw crap here we go again
+Let's make a game!
+ name:Lemonade Clicker
+ by:lex
+ created:04/01/2023
+ updated:21/01/2023
+ version:1
+ desc:i love lemons<//><b>version 0.1.1</b><.>added tooltips so that you can see how many lemons and limes you're making<.>nerfed vending machine prices<.>added more upgrades<//><b>version 0.1</b><.>added more progression: limes<.>tweaked the CSS(hell)<.>added more achievements<//><b>version 0.0.1</b><.>added textures<.>added a background<.>added additions<.>additional additions include:<//>button texture<//>upgrades<//>  proper CSS(kinda)<//><b>version 0.0.01</b><.>made this because why not<.>screw you communism
+
+Settings
+
+ spritesheet:i, 48 by 48, https://i.postimg.cc/66cT3thM/lemons.png
+ spritesheet:ach, 48 by 48, https://i.postimg.cc/1zDy6rsY/achs-export.png
+ building cost increase:125%
+
+CSS
+
+  #game
+  {
+    background:black;
+  }
+  #game. .thing.owned
+  {
+    background:gray;
+  }
+  #game. .thing.notOwned 
+  {
+    background:black;
+  }
+  #game.filtersOn .thing.cantAfford.notOwned
+  {
+    filter:blur(2px);
+    background:black;
+  }
+
+Layout
+
+*main
+  contains:res, buttons
+  *res
+    contains:Resources
+    class:fullWidth
+  *buttons
+    contains:Buttons
+*store
+  contains:buildings, upgrades
+  *buildings
+    contains:BulkDisplay, Buildings
+    header:Buildings
+    tooltip origin:left
+  *upgrades
+    contains:Upgrades
+    header:Upgrades
+    costs:hide
+    names:hide
+
+Buttons
+
+ *lemonbutton
+  on click:gain 1 lemon
+  on click:if (have limeunlock) gain 1 lime
+  class:bigButton
+  icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
+  no tooltip
+
+Resources
+
+ *lemon|lemons
+  show earned
+  name:Lemons
+  desc:Juicing <b>[lemon:ps] lemons</b> per second.
+  icon:i[0,0]
+ 
+ *lime|limes
+  show earned
+  name:Limes
+  desc:Squeezing <b>[lime:ps] limes</b> per second.
+  hidden when 0
+  icon:i[1,0]
+ 
+ *orange|oranges
+  show earned
+  hidden when 0
+  name:Oranges
+  icon:i[2,0]
+
+Buildings
+
+ *lemonadestand1|box
+  name:Lemonade Cardboard Box
+  on tick:gain 0.1 lemon
+  desc:A basic cardboard box to sell lemonade.
+  req:1 lemon:earned
+  cost:15 lemons
+  icon:i[0,1]
+
+ *lemonadestand2|stand
+  name:Lemonade Stand
+  on tick:gain 1 lemon
+  desc:A small wooden stand to sell more lemonade.
+  cost:200 lemons
+  req:100 lemons:earned
+  icon:i[1,1]
+
+//buy with lemons and limes
+ *lemonadestand3|lemstore
+  name:Lemonade Store
+  on tick:gain 25 lemons
+  on tick:gain 1 lime
+  desc:A big store to sell more lemonade.
+  cost:40000 lemons, 50 limes
+  req:15 lime:earned
+  icon:i[2,1]
+
+ *lemonadestand4|vending
+  name:Lemonade Vending Machine
+  on tick:gain 65 lemons
+  on tick:gain 5 limes
+  desc:A portable vending machine to sell lots of lemonade.
+  cost:5500000 lemons, 50000 limes
+  req:1e5 limes:earned
+  icon:i[3,1]
+
+//lemons, limes, and oranges
+
+Upgrades
+
+///////////////////////////////////////////////////////BUILDING UPGRADES
+
+/////////////////////////////////////BOXES
+
+ *boxup1
+  name:Wet resistant boxes
+  desc:Boxes are <b>twice</b> as efficient.<q>"These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?"</q>
+  req:1 box
+  cost:100 lemons
+  passive:multiply lemon yield of box by 2
+  icon:i[0,5]
+
+ *boxup2
+  name:Recycling
+  desc:Boxes are <b>twice</b> as efficient.<q>"If you recycle old boxes, you get extra money, which means more lemons! Score!"</q>
+  req:5 box
+  cost:20000 lemons
+  passive:multiply lemon yield of box by 2
+  icon:i[1,5]
+
+ *boxup3
+  name:Folding chair
+  desc:Boxes are <b>twice</b> as efficient.<q>"Now you don't have to sit on the ground looking like a hobo."</q>
+  req:25 box
+  cost:200000 lemons
+  passive:multiply lemon yield of box by 2
+  icon:i[2,5]
+
+ *boxup4
+  name:Sugar cookies
+  desc:Boxes are <b>twice</b> as efficient.<q>"Makes the lemonade taste worse, but hey, sugar cookies increase profits!"</q>
+  req:50 box
+  cost:2e7 lemons
+  passive:multiply lemon yield of box by 2
+  icon:i[3,5]
+
+////////////////////////////////////STANDS
+
+ *standup1
+  name:Coat of paint
+  desc:Stands are <b>twice</b> as efficient.<q>"Now they look far more appealing."</q>
+  req:1 stand
+  cost:1200 lemons
+  passive:multiply lemon yield of stand by 2
+  icon:i[0,6]
+
+
+ *standup2
+  name:Flashier signs
+  desc:Stands are <b>twice</b> as efficient.<q>"These have fairy lights and glow in the dark marker!"</q>
+  req:5 stand
+  cost:24000 lemons
+  passive:multiply lemon yield of stand by 2
+  icon:i[1,6]
+
+ *standup3
+  name:Turnstiles
+  desc:Stands are <b>twice</b> as efficient.<q>"Customers passing you by? Install this, and they'll never pass by again!"</q>
+  req:25 stand
+  cost:240000 lemons
+  passive:multiply lemon yield of stand by 2
+  icon:i[2,6]
+
+ *standup4
+  name:Correct posture
+  desc:Stands are <b>twice</b> as efficient.<q>"Stand up straight, and you seem to attract more people."</q>
+  req:50 stand
+  cost:24000000 lemons
+  passive:multiply lemon yield of stand by 2
+  icon:i[3,6]
+
+//////////////////////////////////SHOPS
+
+ *lemstoreup1
+  name:Revolving Doors
+  desc:Stores are <b>twice</b> as efficient.<q>"speen"</q>
+  req:1 lemstore
+  cost:3400 limes
+  passive:multiply lemon yield of lemstore by 2
+  passive:multiply lime yield of lemstore by 2
+  icon:i[0,7]
+
+ *lemstoreup2
+  name:Bigger shelves
+  desc:Stores are <b>twice</b> as efficient.<q>"For bigger lemonades, for bigger profits."</q>
+  req:5 lemstore
+  cost:680000 limes
+  passive:multiply lemon yield of lemstore by 2
+  passive:multiply lime yield of lemstore by 2
+  icon:i[1,7]
+
+///////////////////////////////////////////////////////LEMONADES
+
+ *lemonade1
+  name:Lemonade
+  desc:Lemon production +1%.<q>"We all gotta start somewhere. No ice?!"</q>
+  passive:multiply yield of lemons by 1.01
+  cost:999999 lemons
+  req:100000 lemons:earned
+  icon:i[0,2]
+
+ *lemonade2
+  name:Tornado Lemonade
+  desc:Lemon production +1%.<q>"A blend of lemon and fizzy soda served in a tornado glass!"</q>
+  passive:multiply yield of lemons by 1.01
+  cost:1e10 lemons
+  req:1e8 lemons:earned
+  icon:i[0,2]
+
+///////////////////////////////////////////////////////LIMEADES
+
+ *limeade1
+  name:Limeade
+  desc:Lime production +1%.<q>"Very refreshing! And mildly zesty."</q>
+  passive:multiply yield of limes by 1.01
+  cost:999999 limes
+  req:100000 limes:earned
+  icon:i[0,3]
+
+ *limeade2
+  name:Sourade
+  desc:Lime production +1%.<q>"Ouch! That really puts hair on your tounge..."</q>
+  passive:multiply yield of limes by 1.01
+  cost:1e9 limes
+  req:1e7 limes:earned
+  icon:i[0,3]
+
+////////////////////////////////////////////////OTHER
+
+ *limeunlock
+  name:Fantastic Limes and How To Find Them
+  desc:<b>Unlocks limes,</b> boosts clicking power by a large amount.<q>"Limes are very zesty used in food as a flavoring, or, if juiced, very thirst quenching."</q>
+  req:lemonach3
+  cost:2e6 lemons
+  passive:increase lemon yield of lemonbutton by 999
+  icon:i[1,0]
+
+ *orangeunlock
+  name:Oranges, Orange Juice, and Everything in Between
+  desc:<b>Does absolutely nothing.</b><q>"Hey! It's soaked in orange juice! I don't think you can read this yet..."</q>
+//desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"These ain't your grandma's oranges!"</q>
+  req:limeach3
+  cost:5e10 lemons, 5e6 limes
+//passive:multiply lemon yield of lemonbutton by 10
+//passive:increase lime yield of lemonbutton by 999
+  icon:i[2,0]
+
+Achievements
+
+///////////////////////////////////////////////////////////////////////////////ACHS
+//////////////////////////////////////////////LEMON ACHS
+
+//LEMONS OF ALL TIME
+
+ *lemonach1
+  name:When life gives you lemons...
+  desc:Make 1 lemon.
+  req:1 lemon:earned
+  icon:ach[0,0]
+
+ *lemonach2
+  name:Tight squeeze
+  desc:Make 1,000 lemons.
+  req:1000 lemons:earned
+  icon:ach[1,0]
+
+ *lemonach3
+  name:Juicy
+  desc:Make 1 million lemons.
+  req:1e6 lemons:earned
+  icon:ach[2,0]
+
+ *lemonach4
+  name:Sour taste
+  desc:Make 100 million lemons.<q>"You're not supposed to just lick it!"</q>
+  req:1e8 lemons:earned
+  icon:ach[3,0]
+
+//LEMONS PER SECOND
+
+ *lemonpsach1
+  name:I love lemons
+  desc:Make 1 lemon per second.
+  req:1 lemon:ps
+  icon:ach[0,0]
+
+ *lemonpsach2
+  name:The journey of 1000 lemonades
+  desc:Make 100 lemons per second.<q>"...begins with a single lemon."</q>
+  req:100 lemons:ps
+//fun fact: i did this wrong but i dont want to change it
+  icon:ach[1,0]
+
+ *lemonpsach3
+  name:Close but no lemon
+  desc:Make 10,000 lemons per second.
+  req:10000 lemons:ps
+//close but no banana
+  icon:ach[2,0]
+
+ *lemonpsach4
+  name:Lotta lemons
+  desc:Make 1 million lemons per second.<q>"That's a lot of lemons!"</q>
+  req:1e6 lemons:ps
+  icon:ach[3,0]
+
+///////////////////////////////////////////////LIME ACHS
+
+ *limeach1
+  name:Make life take the lemons back
+  desc:Make 1 lime.<q>"Say, 'I don't want your damn lemons!'"</q>
+  req:1 lime:earned
+  icon:ach[0,1]
+
+ *limeach2
+  name:Need a juicer?
+  desc:Make 1000 limes.<q>"I have to assume you've been doing this all by hand..."</q>
+  req:1000 lime:earned
+  icon:ach[1,1]
+
+ *limeach3
+  name:2.8 pH
+  desc:Make 1 million limes.
+  req:1e6 lime:earned
+  icon:ach[2,1]
+
+ *limeach4
+  name:Sweet and sour
+  desc:Make 100 million limes.
+  req:1e8 lime:earned
+  icon:ach[3,1]
+
+///////LIMES PER SECOND
+
+ *limepsach1
+  name:Once upon a lime
+  desc:Make 1 lime per second.<q>"...there was an orange"</q>
+  req:1 lime:ps
+  icon:ach[0,1]
+
+ *limepsach2
+  name:Sub-lime
+  desc:Make 100 limes per second.
+  req:100 limes:ps
+  icon:ach[1,1]
+
+ *limepsach3
+  name:I think you've gone too far
+  desc:Make 10,000 limes per second.
+  req:1e4 limes:ps
+  icon:ach[2,1]
+
+ *limepsach4
+  name:No, really, you've gone too far
+  desc:Make 1 million limes per second.<q>"Geez, don't you have anything better to do?"</q>
+  req:1e6 limes:ps
+  icon:ach[3,1]
+
+/////////////////////////////BUILDING ACHS
+
+//BOX ACHS
+ *boxach1
+  name:Boxed in
+  desc:Have 1 box.
+  req:1 lemonadestand1
+  icon:ach[0,3]
+
+ *boxach2
+  name:Got box?
+  desc:Have 50 boxes.
+  req:50 lemonadestand1
+  icon:ach[1,3]
+
+
+ *boxach3
+  name:Boxing day
+  desc:Have 100 boxes.
+  req:100 box
+  icon:ach[2,3]
+
+
+//STAND ACHS
+ *standach1
+  name:Got a nickel?
+  desc:Have 1 stand.
+  req:1 stand
+  icon:ach[0,4]
+
+
+ *standach2
+  name:'Round every corner
+  desc:Have 50 stands.
+  req:50 stand
+  icon:ach[1,4]
+
+ *standach3
+  name:Standing upright
+  desc:Have 100 stands.
+  req:100 stand
+  icon:ach[2,4]
+
+
+//store achs
+
+ *storeach1
+  name:Capital purchase
+  desc:Have 1 store.
+  req:1 lemstore
+  icon:ach[0,7]
+
+
+ *storeach2
+  name:National chain
+  desc:Have 50 stores.
+  req:50 lemstore
+  icon:ach[1,7]
+
+
+ *storeach3
+  name:Girl are you construction worker
+  desc:Have 100 stores.<q>"because you are building"</q>
+  req:100 lemstore
+  icon:ach[2,7]
