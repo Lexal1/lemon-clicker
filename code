@@ -86,6 +86,10 @@ Resources
   name:Oranges
   icon:i[2,0]
 
+ *totalbuild
+  is always:box+stand+lemstore+vending
+  hidden
+
 Buildings
 
  *lemonadestand1|box
