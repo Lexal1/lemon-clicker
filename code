@@ -86,7 +86,7 @@ Resources
   name:Oranges
   icon:i[2,0]
 
- *hiddenmanager|totalbuild
+ /*hiddenmanager|totalbuild
   is always:box+stand+lemstore+vending
   hidden
   on tick:
@@ -103,7 +103,7 @@ Resources
     if ($randomvalue=9) toast
     if ($randomvalue=10) toast
     end
-   end
+   end*/
 
 
 Buildings
