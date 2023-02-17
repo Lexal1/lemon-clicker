@@ -1,0 +1,633 @@
+Let's make a game!
+  name:Item Clicker
+  author:Lexal
+  desc:Make items to make more items in this simple clicker game I made to pass the time.
+  created:09/22/2022
+  updated:09/25/2022
+  version:1.0
+
+Settings
+ spritesheet:main, 48 by 48, https://i.postimg.cc/137ffMb0/WIP.png
+ tiling background:https://i.postimg.cc/ht1GtXPq/BGTEMP-export.png
+ spritesheet:upgrades, 48 by 48, https://i.postimg.cc/jdsKKct6/upgradessheet.png
+ building cost increase:120%
+
+CSS
+  #game
+  {
+    font-family:"Times New Roman",Times,serif;
+    color:black;
+  }
+  #game.filtersOn .thing.cantAfford.notOwned
+  {
+    filter:blur(2px);
+  }
+
+Layout
+ use default
+ *changelog
+  in:upgrades
+  header:Changelog
+  contains:Log
+
+Resources
+ *item|items
+  name:Item|Items
+  desc:A very generic item.
+  icon:main[0,0]
+ *rareitem|rareitems
+  name:Rare Item|Rare Items
+  desc:A not-so very generic item.
+  icon:main[1,0]
+  req:1 rareitem:earned
+
+Upgrades
+//headphones
+ *headphones1
+  name:Earbuds
+  desc:1.5x production.<//><q>"The ones with wires that turn into a tourist attraction in your pocket."</q>
+  req:100 items:earned
+  passive:multiply yield of items by 1.5
+  cost:100 items
+  icon:upgrades[0,1]
+ *headphones2
+  name:Wired Headphones
+  desc:1.5x production.<//><q>"These ones get caught on everything."</q>
+  cost:500 items
+  req:200 items:earned
+  req:have headphones1
+  passive:multiply yield of items by 1.5
+  icon:upgrades[2,1]
+ *headphones3
+  name:Decent Headphones
+  desc:2x production.<//><q>"Why are you collecting headphones, anyway?"</q>
+  cost:5000 items
+  req:1000 items:earned
+  req:have headphones2
+  passive:multiply yield of items by 2
+  icon:upgrades[4,1]
+ *headphones4
+  name:Bluetooth Headphones
+  desc:2x production.<//><q>"Finally, some headphones that won't knock over your PC."</q>
+  cost:999999 items
+  req:50000 items:earned
+  req:have headphones3
+  passive:multiply yield of items by 2
+  icon:upgrades[6,1]
+ *headphones5
+  name:Cat Ear Headphones
+  desc:2x production.<//><q>"Are you even a gamer without a pair of cat ear headphones?"</q>
+  cost:10000000 items
+  req:100000 items:earned
+  req:have headphones4
+  passive:multiply yield of items by 2
+  icon:upgrades[8,1]
+ *headphones6
+  name:High Quality Noise Canceling Headphones
+  desc:2x production.<//><q>"They might be overselling it a bit..."</q>
+  cost:500000000 items
+  req:25000000 items:earned
+  req:have headphones5
+  passive:multiply yield of items by 2
+  icon:upgrades[10,1]
+
+//gaming chairs
+ *gamingchair1
+  name:Rickety Chair
+  desc:Doubles your clicking power.<//><q>"Suprising the chair hasn't fallen apart."</q>
+  passive:multiply item yield of itemgenerator by 2
+  cost:500 items
+  req:100 items:earned
+  icon:upgrades[1,1]
+ *gamingchair2
+  name:Old Office Chair
+  desc:Doubles your clicking power.<//><q>"Wheeeeeeeee!"</q>
+  passive:multiply item yield of itemgenerator by 2
+  cost:2500 items
+  req:5000 items:earned
+  req:have gamingchair1
+  icon:upgrades[3,1]
+ *gamingchair3
+  name:Ergonomic Chair
+  desc:<b>Multiplies clicking power based on how many buildings you have.</b><//><q>"Like sinking into a cloud..."</q>
+  cost:50000 items
+  req:10000 items:earned
+  req:have gamingchair2
+  icon:upgrades[5,1]
+  passive:multiply item yield of itemgenerator by min(((((((((((itemmaker1)*(itemmaker2))*(itemmaker3))*(itemmaker4))*(itemmaker5))*(itemmaker6))*(itemmaker7))*(itemmaker8))*(itemmaker9))/8),(((((((((itemmaker1+itemmaker2)+itemmaker3)+itemmaker4)+itemmaker5)+itemmaker6)+itemmaker7)+itemmaker8)+itemmaker9)/2))
+ *gamingchair4
+  name:Old Armchair
+  desc:Doubles the Ergonomic Chair's effects.<//><q>"Not very nice to look at, but very comfortable."</q>
+  cost:4999999 items
+  req:50000 items:earned
+  req:have gamingchair3
+  passive:multiply item yield of gamingchair3 by 2
+  icon:upgrades[7,1]
+ *gamingchair5
+  name:Bar Stool
+  desc:Doubles the Ergonomic Chair's effects.<//><q>"Ah yes, 'gaming chair'."</q>
+  cost:10000000 items
+  req:5000000 items:earned
+  req:have gamingchair4
+  passive:multiply item yield of gamingchair3 by 2
+  icon:upgrades[9,1]
+ *gamingchair6
+  name:Beanbag Chair
+  desc:Doubles the Ergonomic Chair's effects.<//><q>"Like sinking into a very large, dry slime."</q>
+  cost:750000000 items
+  req:50000000 items:earned
+  req:have gamingchair5
+  passive:multiply item yield of gamingchair3 by 2
+  icon:upgrades[11,1]
+
+//rare item related
+ *rareitemfinder
+  name:Rare Item Finder
+  desc:Finding rare items can be hard, but not with this handy tool!<//><b>Occasionally you gain rare items from clicking.</b>
+  req:10000 items:earned
+  cost:100000 items
+  icon:main[0,1]
+ *rareitemmaker
+  name:Rare Item Discoverer
+  desc:Will occasionally find rare items mixed in with your regular ones!
+  req:1000000 items:earned
+  req:1 rareitems:earned
+  cost:5 rareitems
+  on tick:if (chance(1%)) yield 1 rareitem
+  icon:main[0,1]
+ *rarereducer1
+  name:Rare Reducer
+  desc:Makes it likely to find more rare items.
+  cost:15 rareitems
+  req:rareitemfinder
+  req:100000 items:earned
+  req:5 rareitems:earned
+  passive:multiply rareitem yield of itemgenerator by 2
+  icon:main[0,1]
+
+//itemmaker1upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker1 by 2
+ *itemmaker1up1
+  name:Better Scanners
+  desc:Discoverers are twice as efficient.<//><q>"Finally, you can find items right under your nose!"</q>
+  cost:1000 items
+  req:1 itemmaker1
+  icon:upgrades[0,2]
+ *itemmaker1up2
+  name:Man's Best Friend
+  desc:Discoverers are twice as efficient.<//><q>"Dogs are great with helping you find items, especially in bogs."</q>
+  cost:10000 items
+  req:15 itemmaker1
+  icon:upgrades[0,3]
+ *itemmaker1up3
+  name:Databases
+  desc:Discoverers are twice as efficient.<//><q>"Item finders can be semi-redundant when there's large amounts of them. This will help them only find new items in new places."</q>
+  cost:1000000 items
+  req:50 itemmaker1
+  icon:upgrades[0,4]
+//itemmaker2upgrades
+ *TEMPLATE
+  passive:multiply gain of itemmaker2 by 2
+ *itemmaker2up1
+  name:Better Quality Materials
+  desc:Fabricators are twice as efficent.<//><q>"All it does it make it more shiny. Is that a bad thing?"</q>
+  cost:6000 items
+  req:1 itemmaker2
+  icon:upgrades[1,2]
+ *itemmaker2up2
+  name:Chisels
+  desc:Fabricators are twice as efficent.<//><q>"Sometimes the item, when done, will stick to the machine. No more!"</q>
+  cost:60000 items
+  req:15 itemmaker2
+  icon:upgrades[1,3]
+
+//itemmaker3upgrades
+ *TEMPLATE
+  passive:multiply gain of itemmaker3 by 2
+ *itemmaker3up1
+  name:Better Drone AI
+  desc:Deliveries are twice as efficent.<//><q>"You have to admit, it's pretty funny when they bumble into walls."</q>
+  cost:10000 items
+  req:1 itemmaker3
+  icon:upgrades[2,2]
+ *itemmaker3up2
+  name:Stronger Clamps
+  desc:Deliveries are twice as efficent.<//><q>"You'd be amazed at how many items are lost due to weak clamps."</q>
+  cost:2000000 items
+  req:15 itemmaker3
+  icon:upgrades[2,3]
+
+//itemmaker4upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker4 by 2
+ *itemmaker4up1
+  name:Faster Conveyer Belts
+  desc:Factories are twice as efficent.<//><q>"This might backfire when traffic jams occur..."</q>
+  cost:5000000 items
+  req:1 itemmaker4
+  icon:upgrades[3,2]
+ *itemmaker4up2
+  name:Warehouses
+  desc:Factories are twice as efficent.<//><q>"These do beg the question though, where have you been storing your items before this?"</q>
+  cost:25000000 items
+  req:15 itemmaker4
+  icon:upgrades[3,3]
+
+//itemmaker5upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker5 by 2
+ *itemmaker5up1
+  name:Bigger Ships
+  desc:Shipments are twice as efficent.<//><q>"Contrary to popular belief, bigger ships often sail faster in the ocean, and this means more profit for you!"</q>
+  cost:50000000 items
+  req:1 itemmaker5
+  icon:upgrades[4,2]
+ *itemmaker5up2
+  name:Docks
+  desc:Shipments are twice as efficent.<//><q>"Before this, your ships were just dropping off the shipments on a beach somewhere."</q>
+  cost:100000000 items
+  req:15 itemmaker5
+  icon:upgrades[4,3]
+
+//itemmaker6upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker6 by 2
+ *itemmaker6up1
+  name:Turbines
+  desc:Pumps are twice as efficent.<//><q>"Putting turbines into the pipes that draw water so they can power themselves? Brilliant! On paper..."</q>
+  cost:55000000 items
+  req:1 itemmaker6
+  icon:upgrades[5,2]
+ *itemmaker6up2
+  name:Sell Salt Side-Products
+  desc:Pumps are twice as efficent.<//><q>"Even if you're making an item empire, people still need to eat, and therfore season food."</q>
+  cost:1100000000 items
+  req:15 itemmaker6
+  icon:upgrades[5,3]
+
+//itemmaker7upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker7 by 2
+ *itemmaker7up1
+  name:Gate Keys
+  desc:Gates are twice as efficent.<//><q>"Fleeing from a monster is a lot easier when you can lock the door behind you."</q>
+  cost:99900000 items
+  req:1 itemmaker7
+  icon:upgrades[6,2]
+ *itemmaker7up2
+  name:Time Travel
+  desc:Gates are twice as efficent.<//><q>"A fun concept, as long as you don't mess with your grandfather."</q>
+  cost:999900000 items
+  req:15 itemmaker7
+  icon:upgrades[6,3]
+
+//itemmaker8upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker8 by 2
+ *itemmaker8up1
+  name:Item Duoverse
+  desc:Universes are twice as efficent.<//><q>"Universes are so last dimension."</q>
+  cost:20000000 items
+  req:1 itemmaker8
+  icon:upgrades[7,2]
+ *itemmaker8up2
+  name:Universe Orbs
+  desc:Universes are twice as efficent.<//><q>"Whatever you do, DON'T DROP THESE."</q>
+  cost:2000000000 items
+  req:15 itemmaker8
+  icon:upgrades[7,3]
+
+//itemmaker9upgrades
+// are twice as efficent.<//><q>""</q>
+ *TEMPLATE
+  passive:multiply gain of itemmaker9 by 2
+ *itemmaker9up1
+  name:Black Holes
+  desc:White Holes are twice as efficent.<//><q>"To make a white hole work properly, you need to throw items into a black hole. Through laws of physics that don't exist, you can literally double production."</q>
+  cost:1000000000 items
+  req:1 itemmaker9
+  icon:upgrades[8,2]
+ *itemmaker9up2
+  name:Giant Space Nets
+  desc:White Holes are twice as efficent.<//><q>"Ginormous nets in space to catch all of the items spewed out for you."</q>
+  cost:1000000000000 items
+  req:15 itemmaker9
+  icon:upgrades[8,3]
+
+//the end
+ *theendupgrade
+  name:The End?
+  desc:The end of the game?<//><q>"Now's when you get all existential like 'why am I here' and all that."</q>
+  cost:100000 rareitems
+  cost:1000000000000000 items
+  cost:100 itemmaker1
+  cost:100 itemmaker2
+  cost:100 itemmaker3
+  cost:100 itemmaker4
+  cost:100 itemmaker5
+  cost:100 itemmaker6
+  cost:100 itemmaker7
+  cost:100 itemmaker8
+  cost:100 itemmaker9
+  req:100 rareitems
+  icon:upgrades[8,7]
+
+Buildings
+ *itemmaker1
+  name:Item Finder
+  desc:Will find items for you, for free!<.>Produces 1 item per 10 seconds.
+  cost:10 items
+  on tick:yield 0.1 item
+  req:10 item:earned
+  icon:main[0,2]
+ *itemmaker2
+  name:Item Fabricator
+  desc:You can now fabricate 1 item at will, for free!<.>Produces 1 item per second.
+  cost:100 items
+  on tick:yield 1 item
+  req:100 item:earned
+  icon:main[1,2]
+ *itemmaker3
+  name:Item Delivery
+  desc:Now you can collect 15 items for the low low price of free!<.>Produces 15 items per second.
+  cost:10000 items
+  on tick:yield 15 items
+  req:1000 items:earned
+  icon:main[2,2]
+ *itemmaker4
+  name:Item Factory
+  desc:Now you can produce 35 items for the price of, you guessed it, free!<.>Produces 35 items per second.
+  cost:1000000 items
+  on tick:yield 35 items
+  req:500000 items:earned
+  icon:main[3,2]
+ *itemmaker5
+  name:Item Shipments
+  desc:Get massive shipments of 100 items for a massive profit of free!<.>Produces 100 items per second.
+  cost:10000000 items
+  on tick:yield 100 items
+  req:2000000 items:earned
+  icon:main[4,2]
+ *itemmaker6
+  name:Item Pumps
+  desc:Turn some of that waste of space called seawater and turn it into some items for free!<//><.>Produces 500 items per second.
+  cost:500000000 items
+  on tick:yield 500 items
+  req:100000000 items:earned
+  icon:main[5,2]
+ *itemmaker7
+  name:Item Stargates
+  desc:You can now build massive stargates to bring in massive items, for less than free!<//><.>Produces 2,500 items per second.
+  cost:999999999 items
+  on tick:gain 2500 items
+  req:25000000 items:earned
+  icon:main[6,2]
+ *itemmaker8
+  name:Item Universe
+  desc:There seems to be a universe in the multiverse that produces solely items for free!<//><.>Produces 10,000 items per second.
+  cost:100000000000 items
+  on tick:gain 10000 items
+  req:500000000 items:earned
+  icon:main[7,2]
+ *itemmaker9
+  name:Item White Holes
+  desc:Finally, you've found the mythical White Hole Galaxy! It spews out a megaton of items for absolutely free!<//><.>Produces 999,999 items per second.
+  cost:12345678910987 items
+  on tick:yield 999999 items
+  req:9999999999 items:earned
+  icon:main[8,2]
+
+Buttons
+ *itemgenerator
+  name:Item Generator
+  on click:yield 1 item
+  class:bigButton
+  on click:if (have rareitemfinder and chance(1%)) yield 1 rareitem
+  no text
+  icon:https://i.postimg.cc/mkwFV9gT/machine.gif
+ *converter
+  hidden
+  name:Rare Item to Item Converter
+  on click:gain random(items:ps,min(items:max,10000000)) items
+  on click:lose random(1,10) rareitem
+  on click:
+ 	 if (no rareitems)
+ 		 hide converter
+ 	 else
+ 		 show converter
+	 end
+  end
+  desc:I hear you like gambling.
+  req:1 rareitem
+  req:100000 items
+ *extrasbutton
+  hidden
+  on tick:
+   if (chance(1%))
+    $randomvalue=random(1,16)
+    if ($randomvalue=1) toast I hear the cookie market is crashing.
+    if ($randomvalue=2) toast Lexal says hi!
+    if ($randomvalue=3) toast Spaghetti bad.
+    if ($randomvalue=4) toast I am this close to having a mental breakdown.
+    if ($randomvalue=5) toast Jesse. Jesse, we need to click.
+    if ($randomvalue=6) toast Live Toast Reaction
+    if ($randomvalue=7) toast Fun fact: Lexal made all of the assets in this game himself. It was, how you say, not fun.
+    if ($randomvalue=8) toast How'd you get this job, anyway?
+    if ($randomvalue=9) toast You know, if I had to give up everything in life, I would never give you up.
+    if ($randomvalue=10) toast Honestly, I think the item generator is broken or has a wrong code or something.
+    if ($randomvalue=11) toast Did you know that you have rights? The constitution says you do, and so do I.
+    if ($randomvalue=12) toast ¯\_(ツ)_/¯
+    if ($randomvalue=13) toast Do you even read these?
+    if ($randomvalue=14) toast Howdy from South Canada!
+    if ($randomvalue=15) toast Hey, did you know that in terms of-
+    if ($randomvalue=16) toast Can you say "I'm tired of working on this project and obviously have ADHD"?
+    end
+   end
+  on load:log Version 1.0.<.>Added the ending to the game<.>some more building upgrades<.>a few achevement upgrades<.>massive burnout<.>changed some toasts for being too edgy<.>removed herobrine<//>Version-0.20.<//><.>Added a shadow achievement<.>QoL fixes<.>"balancing"<.>changed some outdated dialogue<//> Version -0.25. At the time of this update:<//><.>Added this changelog(hello!)<.>18 achievements<.>Funny little toasts that say funny little things<.>9 buildings<.>18 building upgrades<.>33 total upgrades<.>Custom icons<//>The Far Too Much Update 09/23/2022<.>added another pair of headphones<.>4 new buildings<.>"balancing"<.>still no reason for rare items<.>like 6 new achievements<.>very funny flavor text<.>everything gets really expensive really fast
+Achievements
+//item having
+ *itemmilestone1
+  name:My First Item
+  desc:<q>"Woah! You made a single item. Here's an achevement to keep you going."</q>
+  req:1 item
+  icon:main[0,3]
+ *itemmilestone2
+  name:What am I supposed to do with these?
+  desc:Have 1,000 items.
+  req:1000 item
+  icon:main[1,3]
+ *itemmilestone3
+  name:On top of the material world
+  desc:Have 10,000 items.
+  req:100000 items
+  icon:main[2,3]
+ *itemmilestone4
+  name:How many of these do you have!?
+  desc:Have 100 million items.
+  req:100000000 items
+  icon:main[3,3]
+ *itemmilestone5
+  name:Little to no retail value
+  desc:Have 1 billion items.
+  req:1000000000 items
+  icon:main[8,3]
+ *itemmilestone6
+  name:Huston, you have a problem
+  desc:Have 10 billion items.
+  req:10000000000 items
+  icon:main[9,3]
+ *itemmilestone7
+  name:Wait, It's All Items?
+  desc:Have 100 trillion items.<//><q>"Always has been."</q>
+  req:100000000000000 items
+  icon:main[12,3]
+//IPS
+ *ipsmilestone1
+  name:Perfectly Generic Item(s)
+  desc:Have 10 IPS.
+  req:10 items per second
+  icon:main[0,3]
+ *ipsmilestone2
+  name:POV: You Got Rich Quick
+  desc:Have 100 IPS.
+  req:100 items per second
+  icon:main[1,3]
+ *ipsmilestone3
+  name:Maintaining Full Velocity
+  desc:Have 1,000 IPS.
+  req:1000 items per second
+  icon:main[2,3]
+ *ipsmilestone4
+  name:Gas Gas Gas
+  desc:Have 10,000 IPS.
+  req:10000 items per second
+  icon:main[3,3]
+ *ipsmilestone5
+  name:At The Speed of Sound
+  desc:Have 1 million IPS.
+  req:1000000 items per second
+  icon:main[8,3]
+ *ipsmilestone6
+  name:Cringe Culture
+  desc:Have 100 million IPS.
+  req:100000000 items per second
+  icon:main[9,3]
+ *ipsmilestone7
+  name:Go Touch Grass
+  desc:Have 10 billion IPS.<//><q>"I'm aware that items are also green, but they are not a replacement."</q>
+  req:10000000000 items per second
+  icon:main[12,3]
+//clicks
+ *clicksmilestone1
+  name:Warm Mouse
+  desc:Click the Generator 100 times. <//><q>"You should stop clicking."</q>
+  req:100 itemgenerator:clicks
+  icon:main[4,3]
+ *clicksmilestone2
+  name: Hot mouse, hot mouse, who has the hot mouse?
+  desc:Have 1,000 clicks.
+  req:1000 itemgenerator:clicks
+  icon:main[5,3]
+ *clicksmilestone3
+  name:Seriously, you should stop clicking.
+  desc:Click the Generator 10,000 times.
+  req:10000 itemgenerator clicks
+  icon:main[6,3]
+ *clicksmilestone4
+  name:Heatstruck Mouse
+  desc:Click the Generator 1 million times.
+  req:1000000 itemgenerator clicks
+  icon:main[7,3]
+//building related
+ *itemmaker1ach1
+  name:First Find
+  desc:Have 1 Item Finder.
+  req:1 itemmaker1
+  icon:upgrades[0,2]
+ *itemmaker1ach2
+  name:Discovery Of A Lifetime
+  desc:Have 50 Item Finders.
+  req:50 itemmaker1
+  icon:upgrades[0,3]
+ *itemmaker2ach1
+  name:Fabrications
+  desc:Have 1 Item Fabricator.
+  req:1 itemmaker2
+  icon:upgrades[1,2]
+ *itemmaker2ach2
+  name:Self-reliant
+  desc:Have 50 Item Fabricators.
+  req:50 itemmaker2
+  icon:upgrades[1,3]
+ *itemmaker3ach1
+  name:Deliverzon Prime
+  desc:Have 1 Item Delivery.
+  req:1 itemmaker3
+  icon:upgrades[2,2]
+ *itemmaker3ach2
+  name:With Free Shipping
+  desc:Have 50 Item Deliveries.
+  req:50 itemmaker3
+  icon:upgrades[2,3]
+ *itemmaker4ach1
+  name:Global-Change-Climate-Zone
+  desc:Have 1 Item Factory.
+  req:1 itemmaker4
+  icon:upgrades[3,2]
+ *itemmaker4ach2
+  name:Mass Production
+  desc:Have 50 Item Factories.
+  req:50 itemmaker4
+  icon:upgrades[3,3]
+ *itemmaker5ach1
+  name:All Aboard
+  desc:Have 1 Item Shipment.
+  req:1 itemmaker5
+  icon:upgrades[4,2]
+ *itemmaker6ach1
+  name:Pumped Up
+  desc:Have 1 Item Pump.
+  req:1 itemmaker6
+  icon:upgrades[5,2]
+ *itemmaker7ach1
+  name:Gated Community
+  desc:Have 1 Item Gate.
+  req:1 itemmaker7
+  icon:upgrades[6,2]
+ *itemmaker8ach1
+  name:Universal Production
+  desc:Have 1 Item Universe.
+  req:1 itemmaker8
+  icon:upgrades[7,2]
+ *itemmaker9ach1
+  name:Whited Out
+  desc:Have 1 Item White Hole.
+  req:1 itemmaker9
+  icon:upgrades[8,2]
+//other and shadows
+ *insanity
+  name:Insane (Shadow Achievement)
+  desc:Make 1 billion items with only a single Discoverer.<//><q>"Here, have a free voucher for a visit to a mental hospital."</q>
+  req:itemmaker1=1
+  req:1000000000 items:earned
+  req:(itemmaker2:earned)=0
+  req:(itemmaker3:earned)=0
+  req:(itemmaker4:earned)=0
+  req:(itemmaker5:earned)=0
+  req:(itemmaker6:earned)=0
+  req:(itemmaker7:earned)=0
+  req:(itemmaker8:earned)=0
+  req:(itemmaker9:earned)=0
+  icon:main[1,0]
+ *theendach
+  name:The End
+  desc:Get the end of the game.<//><q>"Wow champ, that's really interesting. Next time, keep it to yourself."</q><//><q>You've beaten the game! Since there's now nothing for you here, may I suggest you try The Lost Labyrinth? It's quite a fun igm game!</q>
+  req:theendupgrade
+  icon:main[0,0]
