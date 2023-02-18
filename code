@@ -82,15 +82,13 @@ Resources
  *orange|oranges
   show earned
   hidden when 0
-  desc:Failing to rhyme <b>[orange:ps] oranges</b> per second.
+  desc:Squashing <b>[orange:ps] oranges</b> per second.
   name:Oranges
   icon:i[2,0]
 
  *hiddenmanager|totalbuild
   is always:box+stand+lemstore+vending
   hidden
-
-
 
 Buildings
 
@@ -175,7 +173,7 @@ Upgrades
   name:Coat of paint
   desc:Stands are <b>twice</b> as efficient.<q>"Now they look far more appealing."</q>
   req:1 stand
-  cost:1000 lemons
+  cost:1200 lemons
   passive:multiply lemon yield of stand by 2
   icon:i[0,6]
 
@@ -241,7 +239,45 @@ Upgrades
   passive:multiply lemon yield of lemstore by 2
   passive:multiply lime yield of lemstore by 2
   icon:i[3,7]
-
+  
+///////////////////////////////VENDING MACHINES
+ 
+ *vendingup1
+  name:Accept change
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Now when kids find a quarter they can spend it on your vending machines instead of saving it for a rainy day!"</q>
+  req:1 vending
+  cost:5700 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[0,8]
+  
+ *vendingup2
+  name:Faulty despensers
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Bonus points if you don't add a clear pane to make them think that it's not your fault."</q>
+  req:5 vending
+  cost:140000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[1,8]
+  
+ *vendingup3
+  name:No refunds
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Now your customers won't complain (as much)!"</q>
+  req:25 vending
+  cost:14000000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[2,8]
+  
+ *vendingup4
+  name:Cages
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"No, these aren't for keeping the machines safe, why do you ask?</q>
+  req:50 vending
+  cost:1400000000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[3,8]
+  
 ///////////////////////////////////////////////////////LEMONADES
 
  *lemonade1
@@ -262,7 +298,7 @@ Upgrades
 
  *lemonade3
   name:Lemon-limeade
-  desc:Lemon production +1%.<q>"Not to be confused with 7-Up."</q>
+  desc:Lemon production +1%.<q>"Not to be confused with a popular brand lemon-lime drink."</q>
   passive:multiply yield of lemons by 1.01
   cost:1e13 lemons
   req:1e11 lemons:earned
@@ -307,11 +343,11 @@ Upgrades
  *orangeunlock
   name:Hero's Guide to Oranges
   desc:<b>Does absolutely nothing.</b><q>"Hey! It's soaked in orange juice! I don't think you can read this yet..."</q>
-//desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"These ain't your grandma's oranges!"</q>
+  //desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"These ain't your grandma's oranges!"</q>
   req:limeach3
   cost:5e10 lemons, 5e6 limes
-//passive:multiply lemon yield of lemonbutton by 10
-//passive:increase lime yield of lemonbutton by 999
+  //passive:multiply lemon yield of lemonbutton by 10
+  //passive:increase lime yield of lemonbutton by 999
   icon:i[2,0]
 
 Achievements
