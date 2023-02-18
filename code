@@ -61,7 +61,7 @@ Buttons
   on click:gain 1 lemon
   on click:if (have limeunlock) gain 1 lime
   class:bigButton
-  icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
+  icon:https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/lemone-leome.png
   no tooltip
 
 Resources
