@@ -86,24 +86,10 @@ Resources
   name:Oranges
   icon:i[2,0]
 
- /*hiddenmanager|totalbuild
+ *hiddenmanager|totalbuild
   is always:box+stand+lemstore+vending
   hidden
-  on tick:
-   if (chance(1%))
-    $randomvalue=random(1,10)
-    if ($randomvalue=1) toast ¯\_(ツ)_/¯
-    if ($randomvalue=2) toast I love lemon water.
-    if ($randomvalue=3) toast What am I supposed to do with these?!?
-    if ($randomvalue=4) toast I tried to make a lemon grenade. It didn't work.
-    if ($randomvalue=5) toast Now you die.
-    if ($randomvalue=6) toast 
-    if ($randomvalue=7) toast
-    if ($randomvalue=8) toast
-    if ($randomvalue=9) toast
-    if ($randomvalue=10) toast
-    end
-   end*/
+
 
 
 Buildings
