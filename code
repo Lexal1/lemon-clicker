@@ -6,7 +6,7 @@ Let's make a game!
  created:04/01/2023
  updated:21/01/2023
  version:1
- desc:i love lemons<//><b>version 0.1.1</b><.>added tooltips so that you can see how many lemons and limes you're making<.>nerfed vending machine prices<.>added more upgrades<//><b>version 0.1</b>added more progression: limes<.>tweaked the CSS(hell)<.>added more achievements<.>added tooltips so that you can see how many lemons and limes you're making and nerfed vending machine prices<//><b>version 0.0.1</b><.>added textures<.>added a background<.>added additions<.>additional additions include:<//>button texture<//>upgrades<//>  proper CSS(kinda)<//><b>version 0.0.01</b><.>made this because why not<.>screw you communism
+ desc:i love lemons<//><b>version 0.1.1.1</b><.>moved to github<.>added vending machines<.>minor fixes, including icons<//><b>version 0.1.1</b><.>added tooltips so that you can see how many lemons and limes you're making<.>nerfed vending machine prices<.>added more upgrades<//><b>version 0.1</b><.>added more progression: limes<.>tweaked the CSS(hell)<.>added more achievements<//><b>version 0.0.1</b><.>added textures<.>added a background<.>added additions<.>additional additions include:<//>button texture<//>upgrades<//>  proper CSS(kinda)<//><b>version 0.0.01</b><.>made this because why not<.>screw you communism
 
 Settings
 
@@ -85,6 +85,12 @@ Resources
   desc:Failing to rhyme <b>[orange:ps] oranges</b> per second.
   name:Oranges
   icon:i[2,0]
+
+ *hiddenmanager|totalbuild
+  is always:box+stand+lemstore+vending
+  hidden
+
+
 
 Buildings
 
@@ -505,21 +511,21 @@ Achievements
   name:Capital purchase
   desc:Have 1 store.
   req:1 lemstore
-  icon:ach[0,7]
+  icon:ach[0,5]
 
 
  *storeach2
   name:National chain
   desc:Have 50 stores.
   req:50 lemstore
-  icon:ach[1,7]
+  icon:ach[1,5]
 
 
  *storeach3
   name:Girl are you construction worker
   desc:Have 100 stores.<q>"because you are building"</q>
   req:100 lemstore
-  icon:ach[2,7]
+  icon:ach[2,5]
 
 ///vending achs
 
@@ -527,16 +533,16 @@ Achievements
   name:Ca-klunk
   desc:Have 1 vending machine.
   req:1 vending
-  icon:ach[0,8]
+  icon:ach[0,6]
   
   *vendach2
   name:Only a dollar
   desc:Have 50 vending machines.
   req:50 vending
-  icon:ach[1,8]
+  icon:ach[1,6]
   
   *vendach3
   name:Only 2 deaths so far
   desc:Have 100 vending machines.
   req:50 vending
-  icon:ach[2,8]
+  icon:ach[2,6]
