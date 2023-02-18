@@ -109,6 +109,7 @@ Buildings
   icon:i[1,1]
 
 //buy with lemons and limes
+
  *lemonadestand3|lemstore
   name:Lemonade Store
   on tick:gain 35 lemons
@@ -123,8 +124,8 @@ Buildings
   on tick:gain 165 lemons
   on tick:gain 5 limes
   desc:A portable vending machine to sell lots of lemonade.
-  cost:5500000 lemons, 50000 limes
-  req:1e5 limes:earned
+  cost:550000 lemons, 5000 limes
+  req:1e4 limes:earned
   icon:i[3,1]
 
 //lemons, limes, and oranges
