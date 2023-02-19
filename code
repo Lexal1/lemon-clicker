@@ -409,8 +409,8 @@ Achievements
   icon:ach[0,0]
 
  *lemonpsach2
-  name:The journey of 1000 lemonades
-  desc:Make 100 lemons per second.<q>"...begins with a single lemon."</q>
+  name:The journey of 1,000 lemons
+  desc:Make 100 lemons per second.
   req:100 lemons:ps
 //fun fact: i did this wrong but i dont want to change it
   icon:ach[1,0]
