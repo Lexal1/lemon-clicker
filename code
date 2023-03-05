@@ -64,6 +64,16 @@ Buttons
   icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
   no tooltip
 
+Includes
+ *include boxup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *boxup[%id]
+    name:[%name]
+    desc:Boxes are <b>twice</b> as efficient.<q>[%flavor]</q>
+    req:[%req]
+    cost:[%cost]
+    passive:multiply lemon yield of box by 2
+    icon:i[[%icon],5]
+
 Resources
 
  *lemon|lemons
@@ -136,22 +146,8 @@ Upgrades
 ///////////////////////////////////////////////////////BUILDING UPGRADES
 
 /////////////////////////////////////BOXES
-
- *boxup1
-  name:Wet resistant boxes
-  desc:Boxes are <b>twice</b> as efficient.<q>"These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?"</q>
-  req:1 box
-  cost:100 lemons
-  passive:multiply lemon yield of box by 2
-  icon:i[0,5]
-
- *boxup2
-  name:Recycling
-  desc:Boxes are <b>twice</b> as efficient.<q>"If you recycle old boxes, you get extra money, which means more lemons! Score!"</q>
-  req:5 box
-  cost:20000 lemons
-  passive:multiply lemon yield of box by 2
-  icon:i[1,5]
+ [include boxup %id="1" %name="Wet resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1 box" %cost="100 lemons" %icon="0"]
+ [include boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5 box" %cost="2000 lemons" %icon="1"]
 
  *boxup3
   name:Folding chair
