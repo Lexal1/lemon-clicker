@@ -252,25 +252,25 @@ Upgrades
   name:Tornado Lemonade
   desc:Lemon production +1%.<q>"A blend of lemon and fizzy soda served in a tornado glass!"</q>
   passive:multiply yield of lemons by 1.01
-  cost:1e10 lemons
+  cost:3e7 lemons
   req:1e8 lemons:earned
-  icon:i[0,2]
+  icon:i[1,2]
 
  *lemonade3
   name:Lemon-limeade
   desc:Lemon production +1%.<q>"Not to be confused with 7-Up."</q>
   passive:multiply yield of lemons by 1.01
-  cost:1e13 lemons
-  req:1e11 lemons:earned
-  icon:i[0,2]
+  cost:1e8 lemons
+  req:1e9 lemons:earned
+  icon:i[2,2]
 
  *lemonade4
   name:D.I.Y Lemonade
   desc:Lemon production +1%.<q>"...It's just a packet of sugar and some lemons..."</q>
   passive:multiply yield of lemons by 1.01
-  cost:1e16 lemons
-  req:1e14 lemons:earned
-  icon:i[0,2]
+  cost:3e8 lemons
+  req:1e10 lemons:earned
+  icon:i[3,2]
 
 ///////////////////////////////////////////////////////LIMEADES
 
@@ -288,7 +288,7 @@ Upgrades
   passive:multiply yield of limes by 1.01
   cost:1e9 limes
   req:1e7 limes:earned
-  icon:i[0,3]
+  icon:i[1,3]
 
 ////////////////////////////////////////////////OTHER
 
