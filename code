@@ -224,7 +224,7 @@ Upgrades
   name:Jim
   desc:Stores are <b>twice</b> as efficient.<q>"...from accounting."</q>
   req:25 lemstore
-  cost:68000000 limes
+  cost:6800000 limes
   passive:multiply lemon yield of lemstore by 2
   passive:multiply lime yield of lemstore by 2
   icon:i[2,7]
@@ -233,7 +233,7 @@ Upgrades
   name:Better advertising
   desc:Stores are <b>twice</b> as efficient.<q>"Even shows up in the newspapers!"</q>
   req:50 lemstore
-  cost:6800000000 limes
+  cost:680000000 limes
   passive:multiply lemon yield of lemstore by 2
   passive:multiply lime yield of lemstore by 2
   icon:i[3,7]
@@ -260,7 +260,7 @@ Upgrades
   name:Lemon-limeade
   desc:Lemon production +1%.<q>"Not to be confused with 7-Up."</q>
   passive:multiply yield of lemons by 1.01
-  cost:1e8 lemons
+  cost:8e7 lemons
   req:1e9 lemons:earned
   icon:i[2,2]
 
@@ -268,7 +268,7 @@ Upgrades
   name:D.I.Y Lemonade
   desc:Lemon production +1%.<q>"...It's just a packet of sugar and some lemons..."</q>
   passive:multiply yield of lemons by 1.01
-  cost:3e8 lemons
+  cost:1e8 lemons
   req:1e10 lemons:earned
   icon:i[3,2]
 
