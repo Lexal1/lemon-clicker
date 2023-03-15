@@ -158,7 +158,7 @@ Upgrades
  [include boxup %id="1" %name="Wet resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1 box" %cost="100 lemons" %icon="0"]
  [include boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5 box" %cost="2000 lemons" %icon="1"]
  [include boxup %id="3" %name="Folding chair" %flavor="Now you don't have to sit on the ground looking like a hobo." %req="25 box" %cost="200000 lemons" %icon="2"]
- [include boxup %id="4" %name="Recycling" %flavor="Makes the lemonade taste worse, but hey, at least they taste good!" %req="50 box" %cost="2000 lemons" %icon="3"]
+ [include boxup %id="4" %name="Sugar cookies" %flavor="Makes the lemonade taste worse, but hey, at least they taste good!" %req="50 box" %cost="2000000 lemons" %icon="3"]
  
 ////////////////////////////////////STANDS
 
