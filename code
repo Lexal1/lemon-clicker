@@ -73,6 +73,14 @@ Includes
     cost:[%cost]
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
+ *include standup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *standup[%id]
+    name:[%name]
+    desc:Stands are <b>twice</b> as efficient.<q>[%flavor]</q>
+    req:[%req]
+    cost:[%cost]
+    passive:multiply lemon yield of stand by 2
+    icon:i[[%icon],6]
 
 Resources
 
@@ -146,59 +154,18 @@ Upgrades
 ///////////////////////////////////////////////////////BUILDING UPGRADES
 
 /////////////////////////////////////BOXES
+
  [include boxup %id="1" %name="Wet resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1 box" %cost="100 lemons" %icon="0"]
  [include boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5 box" %cost="2000 lemons" %icon="1"]
-
- *boxup3
-  name:Folding chair
-  desc:Boxes are <b>twice</b> as efficient.<q>"Now you don't have to sit on the ground looking like a hobo."</q>
-  req:25 box
-  cost:200000 lemons
-  passive:multiply lemon yield of box by 2
-  icon:i[2,5]
-
- *boxup4
-  name:Sugar cookies
-  desc:Boxes are <b>twice</b> as efficient.<q>"Makes the lemonade taste worse, but hey, at least they taste good!"</q>
-  req:50 box
-  cost:2e7 lemons
-  passive:multiply lemon yield of box by 2
-  icon:i[3,5]
-
+ [include boxup %id="3" %name="Folding chair" %flavor="Now you don't have to sit on the ground looking like a hobo." %req="25 box" %cost="200000 lemons" %icon="2"]
+ [include boxup %id="4" %name="Recycling" %flavor="Makes the lemonade taste worse, but hey, at least they taste good!" %req="50 box" %cost="2000 lemons" %icon="3"]
+ 
 ////////////////////////////////////STANDS
 
- *standup1
-  name:Coat of paint
-  desc:Stands are <b>twice</b> as efficient.<q>"Now they look far more appealing."</q>
-  req:1 stand
-  cost:1000 lemons
-  passive:multiply lemon yield of stand by 2
-  icon:i[0,6]
-
-
- *standup2
-  name:Flashier signs
-  desc:Stands are <b>twice</b> as efficient.<q>"These have fairy lights and glow in the dark marker!"</q>
-  req:5 stand
-  cost:24000 lemons
-  passive:multiply lemon yield of stand by 2
-  icon:i[1,6]
-
- *standup3
-  name:Turnstiles
-  desc:Stands are <b>twice</b> as efficient.<q>"Customers passing you by? Install this, and they'll never pass by again!"</q>
-  req:25 stand
-  cost:240000 lemons
-  passive:multiply lemon yield of stand by 2
-  icon:i[2,6]
-
- *standup4
-  name:Correct posture
-  desc:Stands are <b>twice</b> as efficient.<q>"Stand up straight, and you seem to attract more people."</q>
-  req:50 stand
-  cost:24000000 lemons
-  passive:multiply lemon yield of stand by 2
-  icon:i[3,6]
+ [include standup %id="1" %name="Coat of paint" %flavor="Now they look far more appealing." %req="1 stand" %cost="1000 lemons" %icon="0"]
+ [include standup %id="2" %name="Flashier signs" %flavor="These have fairy lights and glow in the dark marker!" %req="5 stand" %cost="24000 lemons" %icon="1"]
+ [include standup %id="3" %name="Turnstiles" %flavor="Customers passing you by? Install this, and they'll never pass by again!" %req="25 stand" %cost="240000 lemons" %icon="2"]
+ [include standup %id="4" %name="Correct posture" %flavor="I couldn't think of a pun here that wasn't stupid." %req="50 stand" %cost="24000000 lemons" %icon="3"]
 
 //////////////////////////////////SHOPS
 
