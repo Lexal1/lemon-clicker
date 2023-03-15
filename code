@@ -204,6 +204,44 @@ Upgrades
   passive:multiply lemon yield of lemstore by 2
   passive:multiply lime yield of lemstore by 2
   icon:i[3,7]
+  
+///////////////////////////////VENDING MACHINES
+ 
+ *vendingup1
+  name:Accept change
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Now when kids find a quarter they can spend it on your vending machines instead of saving it for a rainy day!"</q>
+  req:1 vending
+  cost:5700 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[0,8]
+  
+ *vendingup2
+  name:Faulty despensers
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Bonus points if you don't add a clear pane to make them think that it's not your fault."</q>
+  req:5 vending
+  cost:140000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[1,8]
+  
+ *vendingup3
+  name:No refunds
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"Now your customers won't complain (as much)!"</q>
+  req:25 vending
+  cost:14000000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[2,8]
+  
+ *vendingup4
+  name:Cages
+  desc:Vending Machines are <b>twice</b> as efficient.<q>"No, these aren't for keeping the machines safe, why do you ask?</q>
+  req:50 vending
+  cost:1400000000 limes
+  passive:multiply lemon yield of vending by 2
+  passive:multiply lime yield of vending by 2
+  icon:i[3,8]
 
 ///////////////////////////////////////////////////////LEMONADES
 
@@ -367,7 +405,7 @@ Achievements
 
  *lemonpsach7
   name:Lemons make the world go round
-  desc:Make 1 tillion lemons per second.<q>""...and what goes around, comes around! Wait, I've confused myself.</q>
+  desc:Make 1 trillion lemons per second.<q>""...and what goes around, comes around! Wait, I've confused myself.</q>
   req:1e12 lemons:ps
   icon:ach[6,0]
 
