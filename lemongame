@@ -285,11 +285,19 @@ Achievements
 //////////////////////////////////////////////LIMES
 
  [include totlimeach %id="1" %name="Once upon a lime" %desc="Make 1 lime." %req="1" %icon="0"]
- [include totlimeach %id="1" %name="Need a juicer?" %desc="Make 1,000 limes." %req="1000" %icon="2"]
- [include totlimeach %id="1" %name="2.8 pH" %desc="Make 1 million limes." %req="1e6" %icon="0"]
- [include totlimeach %id="1" %name="Sublime %desc="Make 100 million limes." %req="1e8" %icon="0"]
-
-
+ [include totlimeach %id="2" %name="Need a juicer?" %desc="Make 1,000 limes." %req="1000" %icon="1"]
+ [include totlimeach %id="3" %name="2.8 pH" %desc="Make 1 million limes." %req="1e6" %icon="2"]
+ [include totlimeach %id="4" %name="Sublime" %desc="Make 100 million limes." %req="1e8" %icon="3"]
+ [include totlimeach %id="5" %name="Make life take lemons back" %desc="Make 1 billion limes.<q>Say I don't want your damn lemons!</q>" %req="1e9" %icon="4"]
+ [include totlimeach %id="6" %name="Eyup" %desc="Make 100 billion limes." %req="1e11" %icon="5"]
+ [include totlimeach %id="7" %name="I think you've gone too far" %desc="Make 1 trillion limes." %req="1e12" %icon="6"]
+ [include totlimeach %id="8" %name="No, really, you've gone too far" %desc="Make 100 trillion limes." %req="1e14" %icon="7"]
+ 
+ [include limepsach %id="1" %name="What're those" %desc="Make 1 lime per second." %req="1" %icon="0"]
+ [include limepsach %id="2" %name="Keeping in lime" %desc="Make 10 limes per second." %req="10" %icon="1"]
+ [include limepsach %id="3" %name="Citrus entanglement" %desc="Make 100 limes per second." %req="100" %icon="2"] 
+ [include limepsach %id="4" %name="I love the smell of limes in the morning" %desc="Make 1,000 limes per second." %req="1000" %icon="3"] 
+ 
 //////////////////////////////?///////////////////////BUILDINGS
  [include boxach %id="1" %name="Boxed in" %desc="Have 1 box." %req="1" %icon="0"]
  [include boxach %id="2" %name="Boxing match" %desc="Have 50 boxes." %req="50" %icon="1"]
