@@ -1,0 +1,316 @@
+Let's make a game!
+ name:Lemonade Clicker
+ by:lex
+ created:04/01/2023
+ updated:19/03/2023
+ version:1
+ desc:Make some lemonade in this ripoff of Cookie Clicker!<//><b>Version 1.0!</b><.>added oranges! these citrusy fellows are here to make you stupidly rich<.>less exciting, but reworked whole game's code for more streamlined updates. that means more content, for you<.>old game still exists, but those saves wont work here. sorry!
+
+Settings
+
+ spritesheet:i, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/lemons-export.png
+ spritesheet:ach, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/achs-export.png
+ building cost increase:125%
+
+CSS
+
+  #game
+  {
+    background:black;
+  }
+  #game. .thing.owned
+  {
+    background:gray;
+  }
+  #game. .thing.notOwned 
+  {
+    background:black;
+  }
+  #game.filtersOn .thing.cantAfford.notOwned
+  {
+    filter:blur(2px);
+    background:black;
+  }
+
+Buttons
+
+ *lemonbutton
+  on click:gain 1 lemon
+  on click:if (have limeunlock) gain 1 lime
+  class:bigButton
+  icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
+  no tooltip
+
+Includes
+////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
+ *include boxup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *boxup[%id]
+    name:[%name]
+    desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] box
+    cost:[%cost]
+    passive:multiply lemon yield of box by 2
+    icon:i[[%icon],5]
+ *include standup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *standup[%id]
+    name:[%name]
+    desc:Stands are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] stand
+    cost:[%cost]
+    passive:multiply lemon yield of stand by 2
+    icon:i[[%icon],6]
+ *include shopup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *shopup[%id]
+    name:[%name]
+    desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] shop
+    cost:[%cost]
+    passive:multiply lemon yield of shop by 2
+    passive:multiply lime yield of shop by 2
+    icon:i[[%icon],7]
+ *include vendup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *vendup[%id]
+    name:[%name]
+    desc:Vending Machines are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] vend
+    cost:[%cost]
+    passive:multiply lemon yield of vend by 2
+    passive:multiply lime yield of vend by 2
+    icon:i[[%icon],7]
+////////////////////////////////////////////BEVERAGES
+ *include lemonade %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *lemonade[%id]
+   name:[%name]
+   desc:Lemon production +1%.<q>"[%flavor]"</q>
+   passive:multiply yield of lemons by 1.01
+   cost:[%cost] lemons
+   req:[%req] lemons:earned
+   icon:i[[%icon],2]
+ *include limeade %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *limeade[%id]
+   name:[%name]
+   desc:Lime production +1%.<q>"[%flavor]"</q>
+   passive:multiply yield of limes by 1.01
+   cost:[%cost] limes
+   req:[%req] limes:earned
+   icon:i[[%icon],2]
+///////////////////////////////////ACHS
+////////////////////TOTAL AND PER SECOND
+ *include totlemach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *totlemach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] lemon:earned
+   icon:ach[[%icon],0]
+ *include lempsach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *lempsach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] lemon:ps
+   icon:ach[[%icon],0]
+ *include totlimeach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *totlimeach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] lime:earned
+   icon:ach[[%icon],1]
+ *include limepsach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *limepsach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] lime:ps
+   icon:ach[[%icon],1]
+///////////////////////////BUILDING ACHS
+ *include boxach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *boxach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] box
+   icon:ach[[%icon],3]
+ *include standach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *standach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] stand
+   icon:ach[[%icon],4]
+ *include shopach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *shopach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] shop
+   icon:ach[[%icon],5]
+ *include vendach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *vendach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] vend
+   icon:ach[[%icon],6]
+
+Resources
+
+ *lemon|lemons
+  show earned
+  name:Lemons
+  desc:Juiced <b>[lemon:earned] lemons</b> total.
+  icon:i[0,0]
+ 
+ *lime|limes
+  show earned
+  name:Limes
+  desc:Squeezed <b>[lime:earned] limes</b> total.
+  hidden when 0
+  icon:i[1,0]
+ 
+ *orange|oranges
+  show earned
+  hidden when 0
+  desc:Squashed <b>[orange:earned] oranges</b> total.
+  name:Oranges
+  icon:i[2,0]
+
+ *hiddenmanager|totalbuild
+  is always:box+stand+shop+vend
+  hidden
+
+Buildings
+
+ *lemonadestand1|box
+  name:Lemonade Cardboard Box
+  on tick:gain 0.1 lemon
+  desc:A basic cardboard box to sell lemonade from.
+  req:1 lemon:earned
+  cost:15 lemons
+  icon:i[0,1]
+
+ *lemonadestand2|stand
+  name:Lemonade Stand
+  on tick:gain 1 lemon
+  desc:A small wooden stand to sell more lemonade.
+  cost:200 lemons
+  req:100 lemons:earned
+  icon:i[1,1]
+
+//buy with lemons and limes
+ *lemonadestand3|shop
+  name:Lemonade Store
+  on tick:gain 35 lemons
+  on tick:gain 1 lime
+  desc:A big store to sell a lot more lemonade.
+  cost:40000 lemons, 50 limes
+  req:15 lime:earned
+  icon:i[2,1]
+
+ *lemonadestand4|vend
+  name:Vending Machine
+  on tick:gain 165 lemons
+  on tick:gain 5 limes
+  desc:A portable vending machine to sell lots of lemonade.
+  cost:550000 lemons, 7800 limes
+  req:1e4 limes:earned
+  icon:i[3,1]
+
+//lemons, limes, and oranges
+
+Upgrades
+/////////////////////////////BUILDING UPGRADES
+ [include boxup %id="1" %name="Water resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1" %cost="100 lemons" %icon="0"]
+ [include boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5" %cost="2000 lemons" %icon="1"]
+ [include boxup %id="3" %name="Folding chair" %flavor="Now you don't have to sit on the ground looking like a hobo." %req="25" %cost="200000 lemons" %icon="2"]
+ [include boxup %id="4" %name="Sugar cookies" %flavor="Makes the lemonade taste worse, but hey, at least they taste good!" %req="50" %cost="2000000 lemons" %icon="3"]
+ 
+ [include standup %id="1" %name="Coat of paint" %flavor="Now they look far more appealing." %req="1" %cost="1000 lemons" %icon="0"]
+ [include standup %id="2" %name="Flashier signs" %flavor="These have fairy lights and glow in the dark marker!" %req="5" %cost="24000 lemons" %icon="1"]
+ [include standup %id="3" %name="Turnstiles" %flavor="Customers passing you by? Install this, and they'll never pass by again!" %req="25" %cost="240000 lemons" %icon="2"]
+ [include standup %id="4" %name="A duck" %flavor="The duck walked up to the stand and started asking for grapes. Maybe you could use it as a mascot or something?" %req="50" %cost="24000000 lemons" %icon="3"]
+
+ [include shopup %id="1" %name="Revolving Doors" %flavor="speen" %req="1" %cost="3400 limes" %icon="0"]
+ [include shopup %id="2" %name="Bigger shelves" %flavor="For bigger lemonades, for bigger profits." %req="5" %cost="68000 limes" %icon="1"]
+ [include shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %cost="680000 limes" %icon="2"]
+ [include shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="6800000 limes" %icon="3"]
+
+ [include vendup %id="1" %name="Accept change" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="5700 limes" %icon="0"]
+ [include vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="140000 limes" %icon="1"]
+ [include vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="1400000 limes" %icon="2"]
+ [include vendup %id="4" %name="Cages" %flavor="No, these aren't for keeping the machines safe, why do you ask?" %req="50" %cost="140000000 limes" %icon="3"]
+
+//////////////////////////////////////BEVERAGES
+
+ [include lemonade %id="1" %name="Lemonade" %flavor="We all gotta start somewhere. No ice?!" %req="100000" %cost="999999" %icon="0"]
+ [include lemonade %id="2" %name="Tornado Lemonade" %flavor="A blend of lemon and fizzy soda served in a tornado glass!" %req="1e7" %cost="3e7" %icon="1"]
+ [include lemonade %id="3" %name="Lemon-lime Lemonade" %flavor="Not to be confused with lime-lemon limeade." %req="1e7" %cost="3e7" %icon="2"]
+ [include lemonade %id="4" %name="D.I.Y Lemonade" %flavor="...It's just a packet of sugar and some lemons..." %req="1e8" %cost="7e8" %icon="3"]
+
+ [include limeade %id="1" %name="Limeade" %flavor="Very refreshing! And mildly zesty." %req="100000" %cost="999999" %icon="0"]
+ [include limeade %id="2" %name="Sourade" %flavor="Ouch! That really puts hair on your tounge..." %req="1e7" %cost="3e7" %icon="1"]
+ [include limeade %id="3" %name="Lime-lemon Limeade" %flavor="Not to be confused with lemon-lime lemonade." %req="1e7" %cost="3e7" %icon="2"]
+
+
+ *limeunlock
+  name:Fantastic Limes and How To Find Them
+  desc:<b>Unlocks limes,</b> boosts clicking power by a large amount.<q>"Limes are very zesty used in food as a flavoring, or, if juiced, very thirst quenching."</q>
+  req:lemonach3
+  cost:2e6 lemons
+  passive:increase lemon yield of lemonbutton by totalbuild
+  icon:i[1,0]
+
+ *orangeunlock
+  name:Hero's Guide to Oranges
+  desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"Oranges are a staple for snacks, orange juice, and fighting off scurvy."</q>
+  req:limeach3
+  cost:5e8 lemons, 5e5 limes
+  passive:increase lemon yield of lemonbutton by totalbuild
+  passive:increase lime yield of lemonbutton by totalbuild
+  icon:i[2,0]
+
+Achievements
+//////////////////////////////////////LEMONS
+ [include totlemach %id="1" %name="When life gives you lemons" %desc="Make 1 lemon." %req="1" %icon="0"]
+ [include totlemach %id="2" %name="Tight squeeze" %desc="Make 1,000 lemons." %req="1000" %icon="1"]
+ [include totlemach %id="3" %name="Juicy" %desc="Make 1 million lemons." %req="1e6" %icon="2"]
+ [include totlemach %id="4" %name="Sour taste" %desc="Make 100 million lemons." %req="1e8" %icon="3"]
+ [include totlemach %id="5" %name="Juice all the things" %desc="Make 1 billion lemons." %req="1e9" %icon="4"]
+ [include totlemach %id="6" %name="I am not really counting guy, you know?" %desc="Make 100 billion lemons." %req="1e11" %icon="5"]
+ [include totlemach %id="7" %name="The whole world is covered in lemons" %desc="Make 1 trillion lemons." %req="1e12" %icon="6"]
+ [include totlemach %id="8" %name="And not one of them is mine" %desc="Make 100 trillion lemons." %req="1e14" %icon="7"]
+
+ [include lempsach %id="1" %name="I like lemons" %desc="Make 1 lemon per second." %req="1" %icon="0"]
+ [include lempsach %id="2" %name="The journey of 1,000 lemonades" %desc="Make 10 lemons per second." %req="10" %icon="1"]
+ [include lempsach %id="3" %name="That's a lotta lemons" %desc="Make 100 lemons per second." %req="100" %icon="2"]
+ [include lempsach %id="4" %name="Do you want to build a lemonade stand" %desc="Make 1,000 lemons per second." %req="1000" %icon="3"]
+ [include lempsach %id="5" %name="Gas gas gas" %desc="Make 1 million lemons per second." %req="1e6" %icon="4"]
+ [include lempsach %id="6" %name="They don't grow on trees" %desc="Make 10 million lemons per second.<q>Wait. They do grow on trees? You're kidding, right?</q>" %req="1e7" %icon="5"] 
+ [include lempsach %id="7" %name="It's not maschocism" %desc="Make 100 million lemons per second." %req="1e8" %icon="6"]
+ [include lempsach %id="8" %name="Lemons make the world go round" %desc="Make 1 billion lemons per second.<q>And what goes around, comes around! Wait, I've confused myself.</q>" %req="1e9" %icon="7"]
+
+//////////////////////////////////////////////LIMES
+
+ [include totlimeach %id="1" %name="Once upon a lime" %desc="Make 1 lime." %req="1" %icon="0"]
+ [include totlimeach %id="1" %name="Need a juicer?" %desc="Make 1,000 limes." %req="1000" %icon="2"]
+ [include totlimeach %id="1" %name="2.8 pH" %desc="Make 1 million limes." %req="1e6" %icon="0"]
+ [include totlimeach %id="1" %name="Sublime %desc="Make 100 million limes." %req="1e8" %icon="0"]
+
+
+//////////////////////////////?///////////////////////BUILDINGS
+ [include boxach %id="1" %name="Boxed in" %desc="Have 1 box." %req="1" %icon="0"]
+ [include boxach %id="2" %name="Boxing match" %desc="Have 50 boxes." %req="50" %icon="1"]
+ [include boxach %id="3" %name="Um actually it's a cuboid" %desc="Have 100 boxes." %req="100" %icon="2"]
+ [include boxach %id="4" %name="Moving out" %desc="Have 150 boxes." %req="150" %icon="3"]
+ [include boxach %id="5" %name="All I see is boxes" %desc="Have 200 boxes." %req="200" %icon="4"]
+
+ [include standach %id="1" %name="Standza" %desc="Have 1 stand." %req="1" %icon="0"]
+ [include standach %id="2" %name="Standing upright" %desc="Have 50 stands." %req="50" %icon="1"]
+ [include standach %id="3" %name="Got a nickel?" %desc="Have 100 stands." %req="100" %icon="2"]
+ [include standach %id="4" %name="Outstanding" %desc="Have 150 stands." %req="150" %icon="3"]
+ [include standach %id="5" %name="Just around the corner" %desc="Have 200 stands." %req="200" %icon="4"]
+
+ [include shopach %id="1" %name="Capital purchase" %desc="Have 1 store." %req="1" %icon="0"]
+ [include shopach %id="2" %name="Checkout" %desc="Have 50 stores." %req="50" %icon="1"]
+ [include shopach %id="3" %name="Girl are you construction worker" %desc="Have 100 stores.<q>because you are building</q>" %req="100" %icon="2"]
+ [include shopach %id="4" %name="Need for greed" %desc="Have 150 stores." %req="150" %icon="3"]
+ [include shopach %id="5" %name="Wolf of Walmart" %desc="Have 200 stores." %req="200" %icon="4"]
+
+ [include vendach %id="1" %name="Shake it" %desc="Have 1 vending machine." %req="1" %icon="0"]
+ [include vendach %id="2" %name="Only 2 deaths so far" %desc="Have 50 vending machines." %req="50" %icon="1"]
+ [include vendach %id="3" %name="Ka-clunk" %desc="Have 100 vending machines." %req="100" %icon="2"]
+ [include vendach %id="4" %name="Stuck" %desc="Have 150 vending machines.<q>Again?</q>" %req="150" %icon="3"]
+ [include vendach %id="5" %name="Only a dollar" %desc="Have 200 vending machines.<q>...and then he holds up a comically large dollar! Funniest thing I've ever seen!</q>" %req="200" %icon="4"]
