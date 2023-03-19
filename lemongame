@@ -248,7 +248,7 @@ Upgrades
  *limeunlock
   name:Fantastic Limes and How To Find Them
   desc:<b>Unlocks limes,</b> boosts clicking power by a large amount.<q>"Limes are very zesty used in food as a flavoring, or, if juiced, very thirst quenching."</q>
-  req:lemonach3
+  req:totlemach3
   cost:2e6 lemons
   passive:increase lemon yield of lemonbutton by totalbuild
   icon:i[1,0]
@@ -256,7 +256,7 @@ Upgrades
  *orangeunlock
   name:Hero's Guide to Oranges
   desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"Oranges are a staple for snacks, orange juice, and fighting off scurvy."</q>
-  req:limeach3
+  req:totlimeach3
   cost:5e8 lemons, 5e5 limes
   passive:increase lemon yield of lemonbutton by totalbuild
   passive:increase lime yield of lemonbutton by totalbuild
