@@ -269,7 +269,7 @@ Achievements
  [include totlemach %id="3" %name="Juicy" %desc="Make 1 million lemons." %req="1e6" %icon="2"]
  [include totlemach %id="4" %name="Sour taste" %desc="Make 100 million lemons." %req="1e8" %icon="3"]
  [include totlemach %id="5" %name="Juice all the things" %desc="Make 1 billion lemons." %req="1e9" %icon="4"]
- [include totlemach %id="6" %name="I am not really counting guy, you know?" %desc="Make 100 billion lemons." %req="1e11" %icon="5"]
+ [include totlemach %id="6" %name="I am not really a math guy, you know?" %desc="Make 100 billion lemons." %req="1e11" %icon="5"]
  [include totlemach %id="7" %name="The whole world is covered in lemons" %desc="Make 1 trillion lemons." %req="1e12" %icon="6"]
  [include totlemach %id="8" %name="And not one of them is mine" %desc="Make 100 trillion lemons." %req="1e14" %icon="7"]
 
