@@ -76,7 +76,7 @@ Includes
     cost:[%cost]
     passive:multiply lemon yield of vend by 2
     passive:multiply lime yield of vend by 2
-    icon:i[[%icon],7]
+    icon:i[[%icon],8]
 ////////////////////////////////////////////BEVERAGES
  *include lemonade %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *lemonade[%id]
