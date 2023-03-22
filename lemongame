@@ -93,7 +93,7 @@ Includes
    passive:multiply yield of limes by 1.01
    cost:[%cost] limes
    req:[%req] limes:earned
-   icon:i[[%icon],2]
+   icon:i[[%icon],3]
 ///////////////////////////////////ACHS
 ////////////////////TOTAL AND PER SECOND
  *include totlemach %id %name %desc="There's nothing interesting here." %req %icon="0"
