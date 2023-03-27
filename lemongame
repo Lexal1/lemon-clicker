@@ -340,7 +340,7 @@ Upgrades
   req:totorangeach3
   cost:666 oranges
   on earn:
-   hide choice1
+   hide choice2
    toast choice_sealed_toast_dia
    increase hiddene by 6
   end
@@ -351,7 +351,7 @@ Upgrades
   req:totorangeach3
   cost:666 oranges
   on earn:
-   hide choice2
+   hide choice1
    toast choice_sealed_toast_dia
    increase hiddene by 66
   end
