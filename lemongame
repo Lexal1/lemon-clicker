@@ -339,10 +339,10 @@ Upgrades
   desc:choice1_desc_choosewisely
   req:totorangeach3
   cost:666 oranges
-  passive:increase hiddene by 6
   on earn:
    hide choice1
    toast choice_sealed_toast_dia
+   increase hiddene by 6
   end
   icon:i[6,6]
 
@@ -350,10 +350,10 @@ Upgrades
   desc:choice2_desc_choosewisely
   req:totorangeach3
   cost:666 oranges
-  passive:increase hiddene by 66
   on earn:
    hide choice2
    toast choice_sealed_toast_dia
+   increase hiddene by 66
   end
   icon:i[6,6]
 
