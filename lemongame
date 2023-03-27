@@ -335,7 +335,7 @@ Upgrades
   passive:increase lime yield of lemonbutton by limeps
   icon:i[2,0]
 
- *choice1
+ /*choice1
   desc:choice1_desc_choosewisely
   req:totorangeach3
   cost:666 oranges
@@ -355,7 +355,7 @@ Upgrades
    toast choice_sealed_toast_dia
    increase hiddene by 66
   end
-  icon:i[6,6]
+  icon:i[6,6]*/
 
 Achievements
 //////////////////////////////////////LEMONS
