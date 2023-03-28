@@ -307,6 +307,11 @@ Upgrades
  [include vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="1400000 limes" %icon="2"]
  [include vendup %id="4" %name="Cages" %flavor="No, these aren't for keeping the machines safe, why do you ask?" %req="50" %cost="140000000 limes" %icon="3"]
 
+ [include weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="630 oranges" %icon="0"]
+ [include weathup %id="2" %name="Selling out" %flavor="Now, now, hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5" %cost="9600 oranges" %icon="1"]
+ [include weathup %id="3" %name="" %flavor="" %req="5" %cost="960000 oranges" %icon="2"]
+
+
 //////////////////////////////////////BEVERAGES
 
  [include lemonade %id="1" %name="Lemonade" %flavor="We all gotta start somewhere. No ice?!" %req="100000" %cost="999999" %icon="0"]
