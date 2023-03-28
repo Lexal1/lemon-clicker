@@ -401,22 +401,22 @@ Achievements
 ///////////////////////////////////////////////////ORANGES
 
  [include totoraach %id="1" %name="No rhymes here, I mean it" %desc="Make 1 orange.<q>Anybody want a peanut?</q>" %req="1" %icon="0"]
- [include totoraach %id="2" %name="" %desc="Make 1,000 oranges." %req="1000" %icon="1"]
+ [include totoraach %id="2" %name="First orange of the day" %desc="Make 1,000 oranges." %req="1000" %icon="1"]
  [include totoraach %id="3" %name="Ow my eyes" %desc="Make 1 million oranges." %req="1e6" %icon="2"]
- [include totoraach %id="4" %name="" %desc="Make 100 million oranges." %req="1e8" %icon="3"]
+ [include totoraach %id="4" %name="I think you have problems" %desc="Make 100 million oranges." %req="1e8" %icon="3"]
  [include totoraach %id="5" %name="It's oranging time" %desc="Make 1 billion oranges.<q>Wait, didn't we already make this joke?</q>" %req="1e9" %icon="4"]
- [include totoraach %id="6" %name="" %desc="Make 100 billion oranges." %req="1e11" %icon="5"]
+ [include totoraach %id="6" %name="Oh hey, you're still here" %desc="Make 100 billion oranges." %req="1e11" %icon="5"]
  [include totoraach %id="7" %name="We can all avoid scurvy if we all eat an orange" %desc="Make 1 trillion oranges.<q>Well, gee, I feel kinda guilty now.</q>" %req="1e12" %icon="6"]
  [include totoraach %id="8" %name="Orange tinted glasses" %desc="Make 100 trillion oranges." %req="1e14" %icon="7"]
  
- [include orapsach %id="1" %name="" %desc="Make 1 orange per second." %req="1" %icon="0"]
- [include orapsach %id="2" %name="" %desc="Make 10 oranges per second." %req="10" %icon="1"]
- [include orapsach %id="3" %name="" %desc="Make 100 oranges per second." %req="100" %icon="2"] 
- [include orapsach %id="4" %name="" %desc="Make 1,000 oranges per second." %req="1000" %icon="3"] 
- [include orapsach %id="5" %name="" %desc="Make 1 million oranges per second." %req="1e6" %icon="4"] 
+ [include orapsach %id="1" %name="At your expense" %desc="Make 1 orange per second." %req="1" %icon="0"]
+ [include orapsach %id="2" %name="I hate oranges" %desc="Make 10 oranges per second.<q>They're smooth and soft and irritating.</q>" %req="10" %icon="1"]
+ [include orapsach %id="3" %name="Fast" %desc="Make 100 oranges per second.<q>Ironically this is quite slow.</q>" %req="100" %icon="2"] 
+ [include orapsach %id="4" %name="Orange you glad that it isn't lemonade" %desc="Make 1,000 oranges per second." %req="1000" %icon="3"] 
+ [include orapsach %id="5" %name="Rolling around" %desc="Make 1 million oranges per second.<q>(at the speed of sound)</q>" %req="1e6" %icon="4"] 
  [include orapsach %id="6" %name="I've run out of jokes" %desc="Make 10 million oranges per second." %req="1e7" %icon="5"] 
- [include orapsach %id="7" %name="" %desc="Make 100 million oranges per second.<q>Only quality here, I swear.</q>" %req="1e8" %icon="6"] 
- [include orapsach %id="8" %name="" %desc="Make 1 billion oranges per second." %req="1e9" %icon="7"]
+ [include orapsach %id="7" %name="SPEEDRUN" %desc="Make 100 million oranges per second." %req="1e8" %icon="6"] 
+ [include orapsach %id="8" %name="I forgorange" %desc="Make 1 billion oranges per second." %req="1e9" %icon="7"]
  
 //////////////////////////////?///////////////////////BUILDINGS
 
