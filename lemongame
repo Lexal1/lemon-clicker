@@ -231,7 +231,7 @@ Resources
   hidden
 
  *hiddene
-  hidden
+  on start:hide this
 
 Buildings
 
