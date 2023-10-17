@@ -56,7 +56,7 @@ Includes
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] box
-    cost:100*[%id] lemons
+    cost:100*%id lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
     
