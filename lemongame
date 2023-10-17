@@ -13,28 +13,30 @@ Settings
  building cost increase:110%
 
 CSS
-
-  #game
-  {
-    background:black;
-  }
-  .upgrade.owned,.achiev.owned
-  {
-  	background:#5d7144;
-  }
-  .thing.cantAfford
-  {
-	  background:maroon;
-  }
-  .upgrade.cantAfford
-  {
-	  border:none;
-  }
-  #game.filtersOn .thing.cantAfford.notOwned
+#game
+{
+	background:#603a29;
+	font-size:12px;
+	color:ivory;
+	text-shadow:none;
+}
+.upgrade.owned,.achiev.owned
+{
+	background:#5d7144;
+}
+.thing.cantAfford
+{
+	background:maroon;
+}
+.upgrade.cantAfford
+{
+	border:none;
+}
+  /*#game.filtersOn .thing.cantAfford.notOwned
   {
     filter:blur(2px);
     background:black;
-  }
+  }*/
 
 Buttons
 
