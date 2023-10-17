@@ -252,12 +252,13 @@ Buildings
   icon:i[1,1]
 
 //buy with lemons and limes
+
  *lemonadestand3|shop
   name:Lemonade Store
   on tick:gain 35 lemons
   on tick:gain 1 lime
   desc:A big store to sell a lot more lemonade.
-  cost:40000 lemons, 50 limes
+  cost:4000 lemons, 50 limes
   req:15 lime:earned
   icon:i[2,1]
 
@@ -266,7 +267,7 @@ Buildings
   on tick:gain 165 lemons
   on tick:gain 5 limes
   desc:A portable vending machine to sell lots of lemonade.
-  cost:550000 lemons, 7800 limes
+  cost:55000 lemons, 7800 limes
   req:1e4 limes:earned
   icon:i[3,1]
 
@@ -278,7 +279,7 @@ Buildings
   on tick:gain 25 limes
   on tick:gain 1 orange
   desc:A machine to make hot days to sell a bunch of lemonade.
-  cost:55000 limes, 45 oranges
+  cost:5500 limes, 45 oranges
   req:5 oranges:earned
   icon:i[4,1]
 
@@ -295,17 +296,17 @@ Upgrades
  [include standup %id="1" %name="Coat of paint" %flavor="Now they look far more appealing." %req="1" %cost="1000 lemons" %icon="0"]
  [include standup %id="2" %name="Flashier signs" %flavor="These have fairy lights and glow in the dark marker!" %req="5" %cost="24000 lemons" %icon="1"]
  [include standup %id="3" %name="Turnstiles" %flavor="Customers passing you by? Install this, and they'll never pass by again!" %req="25" %cost="240000 lemons" %icon="2"]
- [include standup %id="4" %name="A duck" %flavor="The duck walked up to the stand and started asking for grapes. Maybe you could use it as a mascot or something?" %req="50" %cost="24000000 lemons" %icon="3"]
+ [include standup %id="4" %name="A duck" %flavor="The duck walked up to the stand and started asking for grapes. Maybe you could use it as a mascot or something?" %req="50" %cost="240000 lemons" %icon="3"]
 
- [include shopup %id="1" %name="Revolving Doors" %flavor="speen" %req="1" %cost="3400 limes" %icon="0"]
+ [include shopup %id="1" %name="Revolving doors" %flavor="speen" %req="1" %cost="3400 limes" %icon="0"]
  [include shopup %id="2" %name="Bigger shelves" %flavor="For bigger lemonades, for bigger profits." %req="5" %cost="68000 limes" %icon="1"]
  [include shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %cost="680000 limes" %icon="2"]
- [include shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="6800000 limes" %icon="3"]
+ [include shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="680000 limes" %icon="3"]
 
  [include vendup %id="1" %name="Accept change" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="5700 limes" %icon="0"]
  [include vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="140000 limes" %icon="1"]
  [include vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="1400000 limes" %icon="2"]
- [include vendup %id="4" %name="Cages" %flavor="No, these aren't for keeping the machines safe, why do you ask?" %req="50" %cost="140000000 limes" %icon="3"]
+ [include vendup %id="4" %name="Cages" %flavor="No, these aren't for keeping the machines safe, why do you ask?" %req="50" %cost="1400000 limes" %icon="3"]
 
  [include weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="630 oranges" %icon="0"]
  [include weathup %id="2" %name="Selling out" %flavor="Now, now, hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5" %cost="9600 oranges" %icon="1"]
