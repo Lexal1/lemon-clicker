@@ -420,7 +420,7 @@ Achievements
  [include orapsach %id="3" %name="Fast" %desc="Make 100 oranges per second.<q>Ironically this is quite slow.</q>" %req="100" %icon="2"] 
  [include orapsach %id="4" %name="Orange you glad that it isn't lemonade" %desc="Make 1,000 oranges per second." %req="1000" %icon="3"] 
  [include orapsach %id="5" %name="Rolling around" %desc="Make 1 million oranges per second.<q>(at the speed of sound)</q>" %req="1e6" %icon="4"] 
- [include orapsach %id="6" %name="I've run out of jokes" %desc="Make 10 million oranges per second." %req="1e7" %icon="5"] 
+ [include orapsach %id="6" %name="Juice the world" %desc="Make 10 million oranges per second." %req="1e7" %icon="5"] 
  [include orapsach %id="7" %name="SPEEDRUN" %desc="Make 100 million oranges per second." %req="1e8" %icon="6"] 
  [include orapsach %id="8" %name="I forgorange" %desc="Make 1 billion oranges per second." %req="1e9" %icon="7"]
  
