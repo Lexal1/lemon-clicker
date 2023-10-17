@@ -18,13 +18,17 @@ CSS
   {
     background:black;
   }
-  #game. .thing.owned
+  .upgrade.owned,.achiev.owned
   {
-    background:gray;
+  	background:#5d7144;
   }
-  #game. .thing.notOwned 
+  .thing.cantAfford
   {
-    background:black;
+	  background:maroon;
+  }
+  .upgrade.cantAfford
+  {
+	  border:none;
   }
   #game.filtersOn .thing.cantAfford.notOwned
   {
