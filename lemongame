@@ -10,7 +10,7 @@ Settings
 
  spritesheet:i, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/lemons-export.png
  spritesheet:ach, 48 by 48, https://raw.githubusercontent.com/Lexal1/lemon-clicker/main/achs-export.png
- building cost increase:125%
+ building cost increase:110%
 
 CSS
 
@@ -341,28 +341,6 @@ Upgrades
   passive:increase lemon yield of lemonbutton by lemonps
   passive:increase lime yield of lemonbutton by limeps
   icon:i[2,0]
-
- /*choice1
-  desc:choice1_desc_choosewisely
-  req:totorangeach3
-  cost:666 oranges
-  on earn:
-   hide choice2
-   toast choice_sealed_toast_dia
-   increase hiddene by 6
-  end
-  icon:i[6,6]
-
- *choice2
-  desc:choice2_desc_choosewisely
-  req:totorangeach3
-  cost:666 oranges
-  on earn:
-   hide choice1
-   toast choice_sealed_toast_dia
-   increase hiddene by 66
-  end
-  icon:i[6,6]*/
 
 Achievements
 //////////////////////////////////////LEMONS
