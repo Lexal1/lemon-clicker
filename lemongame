@@ -56,7 +56,7 @@ Includes
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] box
-    cost:100+[%id] lemons
+    cost:[%id]*120 lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
     
@@ -281,8 +281,8 @@ Buildings
 
  *lemonadestand5|weath
   name:Weather Machine
-  on tick:gain 350 lemons
-  on tick:gain 25 limes
+  on tick:gain 400 lemons
+  on tick:gain 35 limes
   on tick:gain 1 orange
   desc:A machine to make hot days to sell a bunch of lemonade.
   cost:5500 limes, 45 oranges
@@ -315,8 +315,9 @@ Upgrades
  [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for keeping the machines safe, why do you ask?" %req="50" %icon="3"]
 
  [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %icon="0"]
- [i:weathup %id="2" %name="Selling out" %flavor="Now, now, hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5"%icon="1"]
- [i:weathup %id="3" %name="" %flavor="" %req="5" %icon="2"]
+ [i:weathup %id="2" %name="Selling out" %flavor="Now, now, hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5"% icon="1"]
+ [i:weathup %id="3" %name="" %flavor="" %req="25" %icon="2"]
+ [i:weathup %id="3" %name="" %flavor="" %req="50" %icon="3"]
 
 
 //////////////////////////////////////BEVERAGES
