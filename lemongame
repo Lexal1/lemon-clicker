@@ -51,12 +51,12 @@ Buttons
 Includes
 ////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
 
- *include boxup %id %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include boxup %id=2 %name %flavor="There's nothing interesting here." %req %icon="0"
   *boxup[%id]
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] box
-    cost:(100*[%id]) lemons
+    cost:100*[%id] lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
     
