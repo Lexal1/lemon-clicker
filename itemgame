@@ -7,9 +7,9 @@ Let's make a game!
   version:1.0
 
 Settings
- spritesheet:main, 48 by 48, https://i.postimg.cc/137ffMb0/WIP.png
- tiling background:https://i.postimg.cc/ht1GtXPq/BGTEMP-export.png
- spritesheet:upgrades, 48 by 48, https://i.postimg.cc/jdsKKct6/upgradessheet.png
+ spritesheet:main, 48 by 48, https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/itemWIP.png
+ tiling background:https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/BG.png
+ spritesheet:upgrades, 48 by 48, https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/itemupgradessheet.png
  building cost increase:120%
 
 CSS
@@ -411,7 +411,7 @@ Buttons
   class:bigButton
   on click:if (have rareitemfinder and chance(1%)) yield 1 rareitem
   no text
-  icon:https://i.postimg.cc/mkwFV9gT/machine.gif
+  icon:https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/private-beta/machine.gif
  *converter
   hidden
   name:Rare Item to Item Converter
