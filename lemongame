@@ -4,7 +4,7 @@ Let's make a game!
  created:04/01/2023
  updated:19/03/2023
  version:1
- desc:Make some lemonade in this ripoff of Cookie Clicker!<//><b>Version 1.0!</b><.>added oranges! these citrusy fellows are here to make you stupidly rich<.>less exciting, but reworked whole game's code for more streamlined updates. that means more content, for you<.>old game still exists, but those saves wont work here. sorry!<.>added_feature6<.>added a new building! something something song of storms
+ desc:Make some lemonade in this ripoff of Cookie Clicker!<//><b>Version 1.1!</b><.>rewrote the whole game, again<.>new building: orchards. these give you a lot of citruses, but only in large bursts<.>weather machines have upgrades now. it only took me 13 months!<.>there is no holiday update<.>removed angst
 
 Settings
 
@@ -51,7 +51,7 @@ Buttons
 Includes
 ////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
 
- *include boxup %id=2 %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include boxup %id="2" %name %flavor="There's nothing interesting here." %req %icon="0"
   *boxup[%id]
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
