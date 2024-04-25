@@ -37,7 +37,7 @@ CSS
 	filter:blur(2px);
 	background:black;
 }*/
-#box-research
+#game.box-research
 {
   top: 0px;
   bottom: 0px;
