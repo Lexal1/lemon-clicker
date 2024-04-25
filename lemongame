@@ -37,6 +37,10 @@ CSS
     filter:blur(2px);
     background:black;
   }*/
+#box-research
+{
+	overflow: auto
+}
 
 Layout
  *main
