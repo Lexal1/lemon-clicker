@@ -381,11 +381,11 @@ Upgrades
  [i:shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="30000" %icon="3"]
  [i:shopup %id="5" %name="Drive-through" %flavor="How did we not think of this sooner?" %req="100" %cost="150000" %icon="4"]
 
- [i:vendup %id="1" %name="Change acceptors" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="680" %icon="0"]
- [i:vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="3200" %icon="1"]
- [i:vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="32000" %icon="2"]
- [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for the machines, why do you ask?" %req="50" %cost="320000" %icon="3"]
- [i:vendup %id="5" %name="Credit cards" %flavor="Finally, you can bankrupt people over a can of lemonade!" %cost="3200000" %req="100" %icon="5"]
+ [i:vendup %id="1" %name="Change acceptors" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="6800" %icon="0"]
+ [i:vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="32000" %icon="1"]
+ [i:vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="320000" %icon="2"]
+ [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for the machines, why do you ask?" %req="50" %cost="3200000" %icon="3"]
+ [i:vendup %id="5" %name="Credit cards" %flavor="Finally, you can bankrupt people over a can of lemonade!" %cost="32000000" %req="100" %icon="5"]
 
  [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="120" %icon="0"]
  [i:weathup %id="2" %name="Selling out" %flavor="Hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5" %cost="2400" icon="1"]
