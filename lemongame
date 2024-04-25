@@ -4,7 +4,7 @@ Let's make a game!
  created:01/04/2023
  updated:04/24/2024
  version:1
- desc:Make some lemonade in this ripoff of Cookie Clicker!<//><b>Version 1.1!</b><.>rewrote the whole game, again<.>new building: orchards. these give you a lot of citruses, but only in large bursts<.>added another building: presses. these are just another building<.>added another tier of upgrades<.>weather machines have upgrades now. it only took me 13 months!<.>there is no holiday update<.>removed angst
+ desc:Make some lemonade in this ripoff of Cookie Clicker!<//><b>Version 1.1!</b><.>rewrote the whole game, again<.>added research?? i guess??<.>new building: orchards. these give you a lot of citruses, but only in large bursts<.>added another building: presses. these are just another building<.>added another tier of upgrades<.>weather machines have upgrades now. it only took me 13 months!<.>there is no holiday update<.>removed angst
 
 Settings
 
@@ -38,6 +38,34 @@ CSS
     background:black;
   }*/
 
+Layout
+ *main
+   contains:res, buttons
+   *res
+     contains:Resources
+     class:fullWidth
+   *buttons
+     contains:Buttons
+ *store
+   contains:buildings, upgrades, storetoggle
+   *buildings
+     contains:BulkDisplay, Buildings
+     header:Buildings
+     tooltip origin:left
+     ps:show
+   *upgrades
+     contains:Upgrades, tag:upgrade
+     header:Upgrades
+     costs:hide
+     names:hide
+   *research
+     contains:Upgrades, tag:research
+     header:Research
+     costs:hide
+     names:hide
+
+
+
 Buttons
 
  *lemonbutton
@@ -47,6 +75,14 @@ Buttons
   class:bigButton
   icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
   no tooltip
+
+ *storetoggle
+  on click:
+   if (toggle is 1)
+    toggle is 0
+   elseif (toggle is 0)
+    toggle is 1
+  end
 
 Includes
 
@@ -61,6 +97,7 @@ Includes
     cost:[%cost] lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
+    tag:upgrade
     
  *include standup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *standup[%id]
@@ -70,6 +107,7 @@ Includes
     cost:[%cost] lemons
     passive:multiply lemon yield of stand by 2
     icon:i[[%icon],6]
+    tag:upgrade
     
  *include shopup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *shopup[%id]
@@ -80,6 +118,7 @@ Includes
     passive:multiply lemon yield of shop by 2
     passive:multiply lime yield of shop by 2
     icon:i[[%icon],7]
+    tag:upgrade
     
  *include vendup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *vendup[%id]
@@ -90,6 +129,7 @@ Includes
     passive:multiply lemon yield of vend by 2
     passive:multiply lime yield of vend by 2
     icon:i[[%icon],8]
+    tag:upgrade
     
  *include weathup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *weathup[%id]
@@ -101,6 +141,7 @@ Includes
     passive:multiply lime yield of weath by 2
     passive:multiply orange yield of weath by 2
     icon:i[[%icon],9]
+    tag:upgrade
 
  *include orchup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *orchup[%id]
@@ -112,6 +153,7 @@ Includes
     passive:multiply lime yield of orch by 2
     passive:multiply orange yield of orch by 2
     icon:i[[%icon],10]
+    tag:upgrade
 
  *include pressup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *pressup[%id]
@@ -123,6 +165,7 @@ Includes
     passive:multiply lime yield of press by 2
     passive:multiply orange yield of press by 2
     icon:i[[%icon],11]
+    tag:upgrade
     
 ////////////////////////////////////////////BEVERAGES
 
@@ -134,6 +177,7 @@ Includes
    cost:[%cost] lemons
    req:[%req] lemons:earned
    icon:i[[%icon],2]
+   tag:upgrade
    
  *include limeade %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *limeade[%id]
@@ -143,6 +187,7 @@ Includes
    cost:[%cost] limes
    req:[%req] limes:earned
    icon:i[[%icon],3]
+   tag:upgrade
    
  *include orangeade %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *orangeade[%id]
@@ -152,6 +197,7 @@ Includes
    cost:[%cost] orange
    req:[%req] oranges:earned
    icon:i[[%icon],4]
+   tag:upgrade
    
 ///////////////////////////////////ACHS
 
@@ -279,6 +325,9 @@ Resources
   hidden
 
  *time
+  hidden
+
+ *toggle
   hidden
 
 Buildings
