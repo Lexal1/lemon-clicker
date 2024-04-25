@@ -76,18 +76,8 @@ Buttons
   icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
   no tooltip
 
- /*storetoggle
-  on click:
-   if (toggle is 1)
-    toggle is 0
-   elseif (toggle is 0)
-    toggle is 1
-  end*/
-
 Includes
-
- *include test %value1 %value2: %value1*%value2
-////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
+////////////////////////////////////////////////////////////////////////////////////BUILDING UPGRADES
 
  *include boxup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *boxup[%id]
@@ -325,9 +315,6 @@ Resources
   hidden
 
  *time
-  hidden
-
- *toggle
   hidden
 
 Buildings
