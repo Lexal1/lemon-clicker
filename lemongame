@@ -53,50 +53,50 @@ Includes
  *include test %value1 %value2: %value1*%value2
 ////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
 
- *include boxup %id="2" %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include boxup %id= %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *boxup[%id]
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] box
-    cost:[%id]*[%req] lemons
+    cost:[%cost] lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
     
- *include standup %id %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include standup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *standup[%id]
     name:[%name]
     desc:Stands are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] stand
-    cost:1000*[%id] lemons
+    cost:[%cost] lemons
     passive:multiply lemon yield of stand by 2
     icon:i[[%icon],6]
     
- *include shopup %id %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include shopup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *shopup[%id]
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] shop
-    cost:340*[%id] limes
+    cost:[%cost] limes
     passive:multiply lemon yield of shop by 2
     passive:multiply lime yield of shop by 2
     icon:i[[%icon],7]
     
- *include vendup %id %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include vendup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *vendup[%id]
     name:[%name]
     desc:Vending Machines are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] vend
-    cost:570*[%id] limes
+    cost:[%cost] limes
     passive:multiply lemon yield of vend by 2
     passive:multiply lime yield of vend by 2
     icon:i[[%icon],8]
     
- *include weathup %id %name %flavor="There's nothing interesting here." %req %icon="0"
+ *include weathup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *weathup[%id]
     name:[%name]
     desc:Weather Machines are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] weath
-    cost:230*[%id] oranges
+    cost:[%cost] oranges
     passive:multiply lemon yield of weath by 2
     passive:multiply lime yield of weath by 2
     passive:multiply orange yield of weath by 2
@@ -296,35 +296,35 @@ Buildings
 
 Upgrades
 /////////////////////////////BUILDING UPGRADES
- [i:boxup %id="1" %name="Water resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1" %icon="0"]
- [i:boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5" %icon="1"]
- [i:boxup %id="3" %name="Folding chair" %flavor="Now you don't have to sit on the ground looking like a hobo." %req="25" %icon="2"]
- [i:boxup %id="4" %name="Sugar cookies" %flavor="Makes the lemonade taste worse, but hey, at least they're good!" %req="50" %icon="3"]
- [i:boxup %id="5" %name="Punch cards" %flavor="Brings back customers for free rewards! Now you're thinking with capitalism!" %req="100" %icon="4"]
+ [i:boxup %id="1" %name="Water resistant boxes" %flavor="These seem to last quite a bit longer than regular boxes. Who'da thunk that leaving a cardboard box out in the rain would be a bad idea?" %req="1" %cost="120" %icon="0"]
+ [i:boxup %id="2" %name="Recycling" %flavor="If you recycle old boxes, you get extra money, which means more lemons! Score!" %req="5" %cost="2400" %icon="1"]
+ [i:boxup %id="3" %name="Folding chair" %flavor="Now you don't have to sit on the ground looking like a hobo." %req="25" %cost="24000" %icon="2"]
+ [i:boxup %id="4" %name="Sugar cookies" %flavor="Makes the lemonade taste worse, but hey, at least they're good!" %req="50" %cost="240000" %icon="3"]
+ [i:boxup %id="5" %name="Punch cards" %flavor="Brings back customers for free rewards! Now you're thinking with capitalism!" %req="100" %cost="2400000" %icon="4"]
  
- [i:standup %id="1" %name="Coat of paint" %flavor="Now they look far more appealing." %req="1" %icon="0"]
- [i:standup %id="2" %name="Flashier signs" %flavor="These have fairy lights and glow in the dark marker!" %req="5" %icon="1"]
- [i:standup %id="3" %name="Turnstiles" %flavor="Customers passing you by? Install this, and they'll never pass by again!" %req="25" %icon="2"]
- [i:standup %id="4" %name="A duck" %flavor="The duck walked up to the stand and started asking for grapes. Maybe you could use it as a mascot or something?" %req="50" %icon="3"]
- [i:standup %id="5" %name="Impact font" %flavor="THIS IS A GOOD IDEA<//>BOTTOM TEXT" %req="100" %icon="4"]
+ [i:standup %id="1" %name="Coat of paint" %flavor="Now they look far more appealing." %req="1" %cost="520" %icon="0"]
+ [i:standup %id="2" %name="Flashier signs" %flavor="These have fairy lights and glow in the dark marker!" %req="5" %cost="1400" %icon="1"]
+ [i:standup %id="3" %name="Turnstiles" %flavor="Customers passing you by? Install this, and they'll never pass by again!" %req="25" %cost="52000" %icon="2"]
+ [i:standup %id="4" %name="A duck" %flavor="The duck walked up to the stand and started asking for grapes. Maybe you could use it as a mascot or something?" %req="50" %cost="140000" %icon="3"]
+ [i:standup %id="5" %name="Impact font" %flavor="THIS IS A GOOD IDEA<//>BOTTOM TEXT" %req="100" %cost="5200000" %icon="4"]
 
- [i:shopup %id="1" %name="Revolving doors" %flavor="speen" %req="1" %icon="0"]
- [i:shopup %id="2" %name="Bigger shelves" %flavor="For bigger lemonades, for bigger profits." %req="5" %icon="1"]
- [i:shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %icon="2"]
- [i:shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %icon="3"]
- [i:shopup %id="5" %name="Drive-through" %flavor="How did we not think of this sooner?" %req="100" %icon="4"]
+ [i:shopup %id="1" %name="Revolving doors" %flavor="speen" %req="1" %cost="150" %icon="0"]
+ [i:shopup %id="2" %name="Bigger shelves" %flavor="For bigger lemonades, for bigger profits." %req="5" %cost="3000" %icon="1"]
+ [i:shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %cost="15000" %icon="2"]
+ [i:shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="30000" %icon="3"]
+ [i:shopup %id="5" %name="Drive-through" %flavor="How did we not think of this sooner?" %req="100" %cost="150000" %icon="4"]
 
- [i:vendup %id="1" %name="Change acceptors" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %icon="0"]
- [i:vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %icon="1"]
- [i:vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %icon="2"]
- [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for the machines, why do you ask?" %req="50" %icon="3"]
- [i:vendup %id="5" %name="Credit cards" %flavor="Finally, you can bankrupt people over a can of lemonade!" %req="100" %icon="5"]
+ [i:vendup %id="1" %name="Change acceptors" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="680" %icon="0"]
+ [i:vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="3200" %icon="1"]
+ [i:vendup %id="3" %name="No refunds" %flavor="Now your customers won't complain (as much)!" %req="25" %cost="32000" %icon="2"]
+ [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for the machines, why do you ask?" %req="50" %cost="320000" %icon="3"]
+ [i:vendup %id="5" %name="Credit cards" %flavor="Finally, you can bankrupt people over a can of lemonade!" %cost="3200000" %req="100" %icon="5"]
 
- [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %icon="0"]
- [i:weathup %id="2" %name="Selling out" %flavor="Hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5"% icon="1"]
- [i:weathup %id="3" %name="SCIENCE" %flavor="Trust me, this will be worth it in the long run." %req="25" %icon="2"]
- [i:weathup %id="4" %name="Hurricane-cloggers" %flavor="These also work on tornadoes. This will definitely help with lemonade production, somehow?" %req="50" %icon="3"]
- [i:weathup %id="5" %name="Sky lazers" %flavor="Okay, this is getting out of hand." %req="100" %icon="4"]
+ [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="480" %icon="0"]
+ [i:weathup %id="2" %name="Selling out" %flavor="Hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5"% %cost="8400" icon="1"]
+ [i:weathup %id="3" %name="SCIENCE" %flavor="Trust me, this will be worth it in the long run." %req="25" %cost="84000" %icon="2"]
+ [i:weathup %id="4" %name="Hurricane-cloggers" %flavor="These also work on tornadoes. This will definitely help with lemonade production, somehow?" %req="50" %cost="840000" %icon="3"]
+ [i:weathup %id="5" %name="Sky lazers" %flavor="Okay, this is getting out of hand." %req="100" %cost="8400000" %icon="4"]
 
 
 //////////////////////////////////////BEVERAGES
