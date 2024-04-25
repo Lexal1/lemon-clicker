@@ -47,7 +47,7 @@ Layout
    *buttons
      contains:Buttons
  *store
-   contains:buildings, upgrades, storetoggle
+   contains:buildings, upgrades/*, storetoggle*/
    *buildings
      contains:BulkDisplay, Buildings
      header:Buildings
@@ -76,13 +76,13 @@ Buttons
   icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
   no tooltip
 
- *storetoggle
+ /*storetoggle
   on click:
    if (toggle is 1)
     toggle is 0
    elseif (toggle is 0)
     toggle is 1
-  end
+  end*/
 
 Includes
 
