@@ -53,7 +53,7 @@ Includes
  *include test %value1 %value2: %value1*%value2
 ////////////////////////////////////////////////////////////////////////////////////BUILDINGUPGRADES
 
- *include boxup %id= %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+ *include boxup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *boxup[%id]
     name:[%name]
     desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
