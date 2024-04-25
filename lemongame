@@ -101,6 +101,28 @@ Includes
     passive:multiply lime yield of weath by 2
     passive:multiply orange yield of weath by 2
     icon:i[[%icon],9]
+
+ *include orchup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *orchup[%id]
+    name:[%name]
+    desc:Orchards are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] weath
+    cost:[%cost] oranges
+    passive:multiply lemon yield of orch by 2
+    passive:multiply lime yield of orch by 2
+    passive:multiply orange yield of orch by 2
+    icon:i[[%icon],10]
+
+ *include pressup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+  *pressup[%id]
+    name:[%name]
+    desc:Presses are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    req:[%req] weath
+    cost:[%cost] oranges
+    passive:multiply lemon yield of press by 2
+    passive:multiply lime yield of press by 2
+    passive:multiply orange yield of press by 2
+    icon:i[[%icon],11]
     
 ////////////////////////////////////////////BEVERAGES
 
@@ -183,30 +205,48 @@ Includes
    desc:[%desc]
    req:[%req] box
    icon:ach[[%icon],3]
+
  *include standach %id %name %desc="There's nothing interesting here." %req %icon="0"
   *standach[%id]
    name:[%name]
    desc:[%desc]
    req:[%req] stand
    icon:ach[[%icon],4]
+
  *include shopach %id %name %desc="There's nothing interesting here." %req %icon="0"
   *shopach[%id]
    name:[%name]
    desc:[%desc]
    req:[%req] shop
    icon:ach[[%icon],5]
+
  *include vendach %id %name %desc="There's nothing interesting here." %req %icon="0"
   *vendach[%id]
    name:[%name]
    desc:[%desc]
    req:[%req] vend
    icon:ach[[%icon],6]
+
  *include weathach %id %name %desc="There's nothing interesting here." %req %icon="0"
   *weathach[%id]
    name:[%name]
    desc:[%desc]
    req:[%req] weath
    icon:ach[[%icon],7]
+
+ *include orchach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *orchach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] weath
+   icon:ach[[%icon],8]
+
+ *include pressach %id %name %desc="There's nothing interesting here." %req %icon="0"
+  *pressach[%id]
+   name:[%name]
+   desc:[%desc]
+   req:[%req] weath
+   icon:ach[[%icon],9]
 
 Resources
 
@@ -238,8 +278,8 @@ Resources
   is always:(lime:ps)
   hidden
 
- *hiddene
-  on start:hide this
+ *time
+  hidden
 
 Buildings
 
@@ -292,7 +332,31 @@ Buildings
   icon:i[4,1]
 
 
+ *lemonadestand6|orch
+  name:Ochards
+  on tick:gain 1 time
+  on tick: if (time = 10):
+   gain 1000 lemons
+   gain 100 limes
+   gain 10 oranges
+   time is 0
+  end
+  desc:An orchard to produce a lot of lemons, limes, and oranges for lemonade.
+  cost:10000 limes, 500 oranges
+  req:100 oranges:earned
+  icon:i[5,1]
 
+ *lemonadestand7|press
+  name:Lemonade Press
+  on tick:
+   gain 750 lemons
+   gain 50 limes
+   gain 5 oranges
+  end
+  desc:A press to squeeze juice from your lemons to sell even more lemonade.
+  cost:1e8 lemons, 250 oranges
+  req:100 oranges:earned
+  icon:i[6,1]
 
 Upgrades
 /////////////////////////////BUILDING UPGRADES
@@ -320,12 +384,23 @@ Upgrades
  [i:vendup %id="4" %name="Cages" %flavor="No, these aren't for the machines, why do you ask?" %req="50" %cost="320000" %icon="3"]
  [i:vendup %id="5" %name="Credit cards" %flavor="Finally, you can bankrupt people over a can of lemonade!" %cost="3200000" %req="100" %icon="5"]
 
- [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="480" %icon="0"]
- [i:weathup %id="2" %name="Selling out" %flavor="Hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5"% %cost="8400" icon="1"]
- [i:weathup %id="3" %name="SCIENCE" %flavor="Trust me, this will be worth it in the long run." %req="25" %cost="84000" %icon="2"]
- [i:weathup %id="4" %name="Hurricane-cloggers" %flavor="These also work on tornadoes. This will definitely help with lemonade production, somehow?" %req="50" %cost="840000" %icon="3"]
- [i:weathup %id="5" %name="Sky lazers" %flavor="Okay, this is getting out of hand." %req="100" %cost="8400000" %icon="4"]
+ [i:weathup %id="1" %name="Optimal growing weather" %flavor="It's amazing how much faster citrus grows when you allow seasons to exist." %req="1" %cost="120" %icon="0"]
+ [i:weathup %id="2" %name="Selling out" %flavor="Hear me out. If you sell the services of your weather machines, you can make a fortune to buy more lemons." %req="5" %cost="2400" icon="1"]
+ [i:weathup %id="3" %name="SCIENCE" %flavor="Trust me, this will be worth it in the long run." %req="25" %cost="24000" %icon="2"]
+ [i:weathup %id="4" %name="Hurricane-cloggers" %flavor="These also work on tornadoes. This will definitely help with lemonade production, somehow?" %req="50" %cost="430000" %icon="3"]
+ [i:weathup %id="5" %name="Sky lazers" %flavor="Okay, this is getting out of hand." %req="100" %cost="4300000" %icon="4"]
 
+ [i:orchup %id="1" %name="Ladders" %flavor="This way, your workers won't have to climb the trees and break their backs. Two lemons with one stone, eh?" %req="1" %cost="480" %icon="0"]
+ [i:orchup %id="2" %name="GMOs" %flavor="Don't worry, we're 90% sure that these ones don't talk." %req="5" %cost="8400" icon="1"]
+ [i:orchup %id="3" %name="Child labor" %flavor="The children yearn for the mines, so lets make them pick lemons instead." %req="25" %cost="84000" %icon="2"]
+ [i:orchup %id="4" %name="Pest control" %flavor="BUG SPRAY" %req="50" %cost="840000" %icon="3"]
+ [i:orchup %id="5" %name="Shorter trees" %flavor="Yeah, that means less shade, but it means faster harvests!" %req="100" %cost="8400000" %icon="4"]
+
+ [i:pressup %id="1" %name="Hydralic presses" %flavor="With the power of dihydrogen monoxide, we can crush anything that stands perfectly still underneath this giant metal crushing plate." %req="1" %cost="480" %icon="0"]
+ [i:pressup %id="2" %name="Lemon stabilizers" %flavor="The problem with lemons being round is that they sometimes roll out from underneath the press. No more!" %req="5" %cost="6200" icon="1"]
+ [i:pressup %id="3" %name="Gravity" %flavor="Fun fact: Gravity is heavy stuff. Using this force of nature properly can quite literally double your presses' effeciency! Strange, that." %req="25" %cost="62000" %icon="2"]
+ [i:pressup %id="4" %name="Magmatic presses" %flavor="Harnessing the POWER OF THE EARTH'S CORE, we can crush lemons a lot faster!" %req="50" %cost="620000" %icon="3"]
+ [i:pressup %id="5" %name="Safety barriers" %flavor="This will help reduce both the amount of lethalities your company has and the level of blood and gore in your lemonade." %req="100" %cost="6200000" %icon="4"]
 
 //////////////////////////////////////BEVERAGES
 
@@ -333,11 +408,13 @@ Upgrades
  [i:lemonade %id="2" %name="Tornado Lemonade" %flavor="A blend of lemon and fizzy soda served in a tornado glass!" %req="1e7" %cost="3e7" %icon="1"]
  [i:lemonade %id="3" %name="Lemon-lime Lemonade" %flavor="Not to be confused with lime-lemon limeade." %req="1e7" %cost="3e7" %icon="2"]
  [i:lemonade %id="4" %name="D.I.Y Lemonade" %flavor="...It's just a packet of sugar and some lemons..." %req="1e8" %cost="7e8" %icon="3"]
+ [i:lemonade %id="5" %name="Canned Lemonade" %flavor="Despite the temptation, you probably shouldn't feed this to any pet, ever." %req="1e8" %cost="7e8" %icon="4"]
 
  [i:limeade %id="1" %name="Limeade" %flavor="Very refreshing! And mildly zesty." %req="100000" %cost="999999" %icon="0"]
  [i:limeade %id="2" %name="Sourade" %flavor="Ouch! That really puts hair on your tounge..." %req="1e7" %cost="3e7" %icon="1"]
  [i:limeade %id="3" %name="Lime-lemon Limeade" %flavor="Not to be confused with lemon-lime lemonade." %req="1e7" %cost="3e7" %icon="2"]
- [i:limeade %id="4" %name="Limeade 2" %flavor="Now with electric boogaloos!" %req="1e7" %cost="5e8" %icon="0"]
+ [i:limeade %id="4" %name="Limeade 2" %flavor="Now with electric boogaloos!" %req="1e7" %cost="5e8" %icon="3"]
+ [i:limeade %id="5" %name="Skewed Limeade" %flavor="What happened??" %req="5e8" %cost="5e8" %icon="4"]
 
  [i:orangeade %id="1" %name="Orange Juice" %flavor="Sweet!" %req="100000" %cost="999999" %icon="0"]
  [i:orangeade %id="2" %name="Orange Julius" %flavor="Someone somewhere thought that mixing milk and raw eggs with orange juice was a good idea." %req="1e7" %cost="3e7" %icon="1"]
