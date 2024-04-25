@@ -47,7 +47,7 @@ Layout
    *buttons
      contains:Buttons
  *store
-   contains:buildings, upgrades/*, storetoggle*/
+   contains:buildings, upgrades, research
    *buildings
      contains:BulkDisplay, Buildings
      header:Buildings
