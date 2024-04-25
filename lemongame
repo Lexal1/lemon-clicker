@@ -345,7 +345,7 @@ Buildings
    end
   end
   desc:An orchard to produce a lot of lemons, limes, and oranges for lemonade.
-  cost:10000 limes, 500 oranges
+  cost:50000 limes, 500 oranges
   req:100 oranges:earned
   icon:i[5,1]
 
