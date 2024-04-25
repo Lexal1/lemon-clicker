@@ -367,11 +367,10 @@ Buildings
   req:5 oranges:earned
   icon:i[4,1]
 
-
  *lemonadestand6|orch
   name:Ochards
   on tick:
-   if (time = 10)
+   if (time >= 10)
     gain 1000 lemons
     gain 100 limes
     gain 10 oranges
@@ -474,7 +473,7 @@ Upgrades
   desc:<b>Unlocks oranges,</b> boosts lemon and lime clicking power by a large amount.<q>"Oranges are a staple for snacks, orange juice, and fighting off scurvy."</q>
   req:totlimeach3
   cost:1e7 lemons, 5e5 limes
-  passive:multiply lemon yield of lemonbutton by lemonps/500
+  passive:multiply lemon yield of lemonbutton by lemonps/1000
   passive:increase lime yield of lemonbutton by limeps
   icon:i[2,0]
   tag:research
