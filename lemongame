@@ -572,8 +572,14 @@ Achievements
  [i:weathach %id="5" %name="Thunder and lightning aren't so frightning" %desc="Have 200 weather machines." %req="200" %icon="4"]
 
  [i:orchach %id="1" %name="Rows and rows" %desc="Have 1 orchard." %req="1" %icon="0"]
- [i:orchach %id="2" %name="It's raining rain" %desc="Have 50 weather machines.<q>What did you expect? Tacos?</q>" %req="50" %icon="1"]
- [i:orchach %id="3" %name="Power over sky" %desc="Have 100 weather machines." %req="100" %icon="2"]
- [i:orchach %id="4" %name="The trees are really sneezing today" %desc="Have 150 weather machines." %req="150" %icon="3"]
- [i:orchach %id="5" %name="Thunder and lightning aren't so frightning" %desc="Have 200 weather machines." %req="200" %icon="4"]
+ [i:orchach %id="2" %name="It's raining lemons" %desc="Have 50 orchards.<q>From out of the leaves!</q>" %req="50" %icon="1"]
+ [i:orchach %id="3" %name="Each and every orchard" %desc="Have 100 orchards." %req="100" %icon="2"]
+ [i:orchach %id="4" %name="Offset carbon footprint" %desc="Have 150 orchards." %req="150" %icon="3"]
+ [i:orchach %id="5" %name="The lemoneer" %desc="Have 200 orchards." %req="200" %icon="4"]
+
+ [i:pressach %id="1" %name="squish" %desc="Have 1 press." %req="1" %icon="0"]
+ [i:pressach %id="2" %name="Pressing matters" %desc="Have 50 presses." %req="50" %icon="1"]
+ [i:pressach %id="3" %name="The lemon obliberator 2000" %desc="Have 100 presses." %req="100" %icon="2"]
+ [i:pressach %id="4" %name="A fine paste" %desc="Have 150 presses." %req="150" %icon="3"]
+ [i:pressach %id="5" %name="Press release" %desc="Have 200 presses." %req="200" %icon="4"]
 
