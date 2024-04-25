@@ -335,12 +335,13 @@ Buildings
  *lemonadestand6|orch
   name:Ochards
   on tick:
-   gain 1 time
-   if (time = 10):
+   if (time = 10)
     gain 1000 lemons
     gain 100 limes
     gain 10 oranges
     time is 0
+   else
+    gain 1 time
    end
   end
   desc:An orchard to produce a lot of lemons, limes, and oranges for lemonade.
