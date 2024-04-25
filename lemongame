@@ -417,9 +417,9 @@ Upgrades
 
  [i:shopup %id="1" %name="Revolving doors" %flavor="speen" %req="1" %cost="150" %icon="0"]
  [i:shopup %id="2" %name="Bigger shelves" %flavor="For bigger lemonades, for bigger profits." %req="5" %cost="3000" %icon="1"]
- [i:shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %cost="15000" %icon="2"]
- [i:shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="30000" %icon="3"]
- [i:shopup %id="5" %name="Drive-through" %flavor="How did we not think of this sooner?" %req="100" %cost="150000" %icon="4"]
+ [i:shopup %id="3" %name="Jim" %flavor="...from accounting." %req="25" %cost="150000" %icon="2"]
+ [i:shopup %id="4" %name="Better advertising" %flavor="Even shows up in the newspapers!" %req="50" %cost="300000" %icon="3"]
+ [i:shopup %id="5" %name="Drive-through" %flavor="How did we not think of this sooner?" %req="100" %cost="15000000" %icon="4"]
 
  [i:vendup %id="1" %name="Change acceptors" %flavor="You wouldn't happen to have a penny on you, would ya?" %req="1" %cost="6800" %icon="0"]
  [i:vendup %id="2" %name="Faulty despensers" %flavor="Bonus points if you don't add a clear front to make them think that it's not your fault." %req="5" %cost="32000" %icon="1"]
