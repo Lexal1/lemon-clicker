@@ -73,7 +73,7 @@ Buttons
   on click:if (have limeunlock) gain 1 lime
   on click:if (have orangeunlock) gain 0.1 orange
   class:bigButton
-  icon:https://i.postimg.cc/fysgh0zw/lemone-leome.png
+  icon:https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/lemone-leome.png
   no tooltip
 
 Includes
@@ -87,7 +87,7 @@ Includes
     cost:[%cost] lemons
     passive:multiply lemon yield of box by 2
     icon:i[[%icon],5]
-    tag:upgrade
+    tags:upgrade, tier[%id]
     
  *include standup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *standup[%id]
@@ -274,14 +274,14 @@ Includes
   *orchach[%id]
    name:[%name]
    desc:[%desc]
-   req:[%req] weath
+   req:[%req] orch
    icon:ach[[%icon],8]
 
  *include pressach %id %name %desc="There's nothing interesting here." %req %icon="0"
   *pressach[%id]
    name:[%name]
    desc:[%desc]
-   req:[%req] weath
+   req:[%req] press
    icon:ach[[%icon],9]
 
 Resources
@@ -467,6 +467,7 @@ Upgrades
   cost:1e6 lemons
   passive:increase lemon yield of lemonbutton by lemonps
   icon:i[1,0]
+  tag:research
 
  *orangeunlock
   name:Hero's Guide to Oranges
@@ -476,6 +477,7 @@ Upgrades
   passive:multiply lemon yield of lemonbutton by lemonps/100
   passive:increase lime yield of lemonbutton by limeps
   icon:i[2,0]
+  tag:research
 
 Achievements
 //////////////////////////////////////LEMONS
@@ -515,7 +517,7 @@ Achievements
  [i:limepsach %id="5" %name="Don't give me that" %desc="Make 1 million limes per second." %req="1e6" %icon="4"] 
  [i:limepsach %id="6" %name="Has appeal" %desc="Make 10 million limes per second." %req="1e7" %icon="5"] 
  [i:limepsach %id="7" %name="Top of the lime jokes" %desc="Make 100 million limes per second.<q>Only quality here, I swear.</q>" %req="1e8" %icon="6"] 
- [i:limepsach %id="8" %name="Limeited time on this earth" %desc="Make 1 billion limes per second." %req="1e9" %icon="7"]
+ [i:limepsach %id="8" %name="Limeited time on this planet" %desc="Make 1 billion limes per second." %req="1e9" %icon="7"]
  
 ///////////////////////////////////////////////////ORANGES
 
@@ -568,4 +570,10 @@ Achievements
  [i:weathach %id="3" %name="Power over sky" %desc="Have 100 weather machines." %req="100" %icon="2"]
  [i:weathach %id="4" %name="The trees are really sneezing today" %desc="Have 150 weather machines." %req="150" %icon="3"]
  [i:weathach %id="5" %name="Thunder and lightning aren't so frightning" %desc="Have 200 weather machines." %req="200" %icon="4"]
+
+ [i:orchach %id="1" %name="Rows and rows" %desc="Have 1 orchard." %req="1" %icon="0"]
+ [i:orchach %id="2" %name="It's raining rain" %desc="Have 50 weather machines.<q>What did you expect? Tacos?</q>" %req="50" %icon="1"]
+ [i:orchach %id="3" %name="Power over sky" %desc="Have 100 weather machines." %req="100" %icon="2"]
+ [i:orchach %id="4" %name="The trees are really sneezing today" %desc="Have 150 weather machines." %req="150" %icon="3"]
+ [i:orchach %id="5" %name="Thunder and lightning aren't so frightning" %desc="Have 200 weather machines." %req="200" %icon="4"]
 
