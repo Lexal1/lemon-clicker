@@ -334,12 +334,14 @@ Buildings
 
  *lemonadestand6|orch
   name:Ochards
-  on tick:gain 1 time
-  on tick: if (time = 10):
-   gain 1000 lemons
-   gain 100 limes
-   gain 10 oranges
-   time is 0
+  on tick:
+   gain 1 time
+   if (time = 10):
+    gain 1000 lemons
+    gain 100 limes
+    gain 10 oranges
+    time is 0
+   end
   end
   desc:An orchard to produce a lot of lemons, limes, and oranges for lemonade.
   cost:10000 limes, 500 oranges
