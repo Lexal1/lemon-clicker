@@ -141,7 +141,7 @@ Includes
   *orchup[%id]
     name:[%name]
     desc:Orchards are <b>twice</b> as efficient.<q>"[%flavor]"</q>
-    req:[%req] weath
+    req:[%req] orch
     cost:[%cost] oranges
     passive:multiply lemon yield of orch by 2
     passive:multiply lime yield of orch by 2
@@ -154,7 +154,7 @@ Includes
   *pressup[%id]
     name:[%name]
     desc:Presses are <b>twice</b> as efficient.<q>"[%flavor]"</q>
-    req:[%req] weath
+    req:[%req] press
     cost:[%cost] oranges
     passive:multiply lemon yield of press by 2
     passive:multiply lime yield of press by 2
