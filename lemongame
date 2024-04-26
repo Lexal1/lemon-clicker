@@ -462,7 +462,7 @@ Upgrades
  [i:orangeade %id="1" %name="Orange Juice" %flavor="Sweet!" %req="100000" %cost="999999" %icon="0"]
  [i:orangeade %id="2" %name="Orange Julius" %flavor="Someone somewhere thought that mixing milk and raw eggs with orange juice was a good idea." %req="1e7" %cost="3e7" %icon="1"]
  [i:orangeade %id="3" %name="Orange-Lime-lemon Orangelimeorangelemonade" %flavor="You ruined it." %req="1e7" %cost="3e7" %icon="2"]
- [i:orangeade %id="4" %name="Orange Flavored Soda Product" %flavor="Legally still a drinkable liquid." %req="1e7" %cost="5e8" %icon="0"]
+ [i:orangeade %id="4" %name="Orange Flavored Soda Product" %flavor="Legally still a drinkable liquid." %req="1e7" %cost="5e8" %icon="3"]
 
  *limeunlock
   name:Fantastic Limes and How To Find Them
