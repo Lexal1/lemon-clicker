@@ -125,7 +125,7 @@ Includes
     icon:i[[%icon],8]
     tags:upgrade, tier[%id]
     
- *include weathup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+ *include weathup %id %name %flavor="There's nothing interesting here." %req %cost %icon
   *weathup[%id]
     name:[%name]
     desc:Weather Machines are <b>twice</b> as efficient.<q>"[%flavor]"</q>
@@ -137,7 +137,7 @@ Includes
     icon:i[[%icon],9]
     tags:upgrade, tier[%id]
 
- *include orchup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+ *include orchup %id %name %flavor="There's nothing interesting here." %req %cost %icon
   *orchup[%id]
     name:[%name]
     desc:Orchards are <b>twice</b> as efficient.<q>"[%flavor]"</q>
@@ -150,7 +150,7 @@ Includes
     icon:i[[%icon],10]
     tags:upgrade, tier[%id]
 
- *include pressup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
+ *include pressup %id %name %flavor="There's nothing interesting here." %req %cost %icon
   *pressup[%id]
     name:[%name]
     desc:Presses are <b>twice</b> as efficient.<q>"[%flavor]"</q>
