@@ -65,7 +65,7 @@ Layout
      tooltip origin:left
      ps:show
    *upgrades
-     contains:Upgrades, tags:upgrade, research
+     contains:Upgrades, tag:upgrade, tag:research
      header:Upgrades
      costs:hide
      names:hide
@@ -101,7 +101,7 @@ Includes
     cost:[%cost] lemons
     passive:multiply lemon yield of stand by 2
     icon:i[[%icon],6]
-    tag:upgrade
+    tags:upgrade, tier[%id]
     
  *include shopup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *shopup[%id]
@@ -112,7 +112,7 @@ Includes
     passive:multiply lemon yield of shop by 2
     passive:multiply lime yield of shop by 2
     icon:i[[%icon],7]
-    tag:upgrade
+    tags:upgrade, tier[%id]
     
  *include vendup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *vendup[%id]
@@ -123,7 +123,7 @@ Includes
     passive:multiply lemon yield of vend by 2
     passive:multiply lime yield of vend by 2
     icon:i[[%icon],8]
-    tag:upgrade
+    tags:upgrade, tier[%id]
     
  *include weathup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *weathup[%id]
@@ -135,7 +135,7 @@ Includes
     passive:multiply lime yield of weath by 2
     passive:multiply orange yield of weath by 2
     icon:i[[%icon],9]
-    tag:upgrade
+    tags:upgrade, tier[%id]
 
  *include orchup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *orchup[%id]
@@ -148,7 +148,7 @@ Includes
     passive:multiply orange yield of orch by 2
     passive:increase time yield of orch by 0.5
     icon:i[[%icon],10]
-    tag:upgrade
+    tags:upgrade, tier[%id]
 
  *include pressup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *pressup[%id]
@@ -160,7 +160,7 @@ Includes
     passive:multiply lime yield of press by 2
     passive:multiply orange yield of press by 2
     icon:i[[%icon],11]
-    tag:upgrade
+    tags:upgrade, tier[%id]
     
 ////////////////////////////////////////////BEVERAGES
 
