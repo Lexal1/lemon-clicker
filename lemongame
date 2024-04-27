@@ -468,7 +468,7 @@ Upgrades
   name:Fantastic Limes and How To Find Them
   desc:<b>Unlocks limes,</b> boosts clicking power by a large amount.<q>"Limes are very zesty used in food as a flavoring, or, if juiced, very thirst quenching."</q>
   req:totlemach3
-  cost:1e6 lemons
+  cost:1e5 lemons
   passive:increase lemon yield of lemonbutton by lemonps
   icon:i[1,0]
   tag:research
