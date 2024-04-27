@@ -106,7 +106,7 @@ Includes
  *include shopup %id %name %flavor="There's nothing interesting here." %req %cost %icon="0"
   *shopup[%id]
     name:[%name]
-    desc:Boxes are <b>twice</b> as efficient.<q>"[%flavor]"</q>
+    desc:Shops are <b>twice</b> as efficient.<q>"[%flavor]"</q>
     req:[%req] shop
     cost:[%cost] limes
     passive:multiply lemon yield of shop by 2
