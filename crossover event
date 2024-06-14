@@ -77,7 +77,7 @@ Buttons
   on click:if (have coryunlock) gain 1 cory
   on click:if (have gregunlock) gain 0.1 greg
   class:bigButton
-  icon:https://raw.githubusercontent.com/Lexal1/lexal-IGM-games/main/georgee-leome.png
+  icon:
   no tooltip
 
 Includes
