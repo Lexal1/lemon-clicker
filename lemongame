@@ -146,7 +146,6 @@ Includes
     passive:multiply lemon yield of orch by 2
     passive:multiply lime yield of orch by 2
     passive:multiply orange yield of orch by 2
-    passive:increase time yield of orch by 0.5
     icon:i[[%icon],10]
     tags:upgrade, tier[%id]
 
@@ -375,10 +374,10 @@ Buildings
  *lemonadestand6|orch
   name:Orchards
   on tick:
-   if (time >= 10)
-    gain 1000 lemons
-    gain 100 limes
-    gain 10 oranges
+   if (time >= 159)
+    gain 1500 lemons
+    gain 150 limes
+    gain 15 oranges
     time is 0
    else
     gain 1 time
